@@ -32,7 +32,7 @@ const CARD_DARK = {
 
 const Solutions = () => (
   <section id="sviluppo-erp" className="scroll-mt-24 relative overflow-hidden py-3 md:py-5" style={{ background: "#F6FBFF" }}>
-    <div className="relative mx-auto w-[95%] rounded-[32px] md:rounded-[40px] py-14 md:py-20 overflow-hidden"
+    <div className="relative mx-auto w-[95%] rounded-[32px] md:rounded-[40px] py-10 md:py-14 overflow-hidden"
       style={{
         background: "linear-gradient(180deg, #0F162B 0%, #16234C 100%)",
         boxShadow: "0 24px 80px -12px hsla(226,46%,11%,0.35), 0 0 0 0.5px rgba(255,255,255,0.05)",

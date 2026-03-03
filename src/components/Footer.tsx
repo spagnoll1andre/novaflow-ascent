@@ -15,8 +15,8 @@ const clients = ["Tada", "Stemau", "Kosmail", "Fraglia"];
 const Footer = () => (
   <footer>
     {/* Dark CTA section — 95% width rounded panel */}
-    <div className="py-6 md:py-10" style={{ background: "#F6FBFF" }}>
-      <div className="relative mx-auto w-[95%] rounded-[32px] md:rounded-[40px] py-20 md:py-28 overflow-hidden"
+    <div className="py-3 md:py-5" style={{ background: "#F6FBFF" }}>
+      <div className="relative mx-auto w-[95%] rounded-[32px] md:rounded-[40px] py-10 md:py-14 overflow-hidden"
         style={{
           background: "linear-gradient(180deg, #0F162B 0%, #16234C 100%)",
           boxShadow: "0 24px 80px -12px hsla(226,46%,11%,0.35), 0 0 0 0.5px rgba(255,255,255,0.05)",
