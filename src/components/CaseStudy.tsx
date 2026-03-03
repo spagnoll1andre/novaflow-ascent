@@ -14,7 +14,7 @@ const CARD = {
 };
 
 const CaseStudy = () => (
-  <section id="case-study" className="scroll-mt-24 py-20 md:py-28 relative overflow-hidden" style={{ background: "#F6FBFF" }}>
+  <section id="soluzioni-verticali" className="scroll-mt-24 py-20 md:py-28 relative overflow-hidden" style={{ background: "#F6FBFF" }}>
     {/* Ambient lights */}
     <div className="absolute top-[10%] left-[25%] w-[600px] h-[450px] rounded-full pointer-events-none"
       style={{ background: "radial-gradient(ellipse at center, hsla(217,83%,50%,0.04) 0%, transparent 70%)" }} />

@@ -32,7 +32,7 @@ const CARD = {
 };
 
 const Solutions = () => (
-  <section id="soluzioni" className="scroll-mt-24 py-20 md:py-28 relative overflow-hidden" style={{ background: "#F6FBFF" }}>
+  <section id="sviluppo-erp" className="scroll-mt-24 py-20 md:py-28 relative overflow-hidden" style={{ background: "#F6FBFF" }}>
     {/* Ambient lights */}
     <div className="absolute top-[-10%] left-[35%] w-[700px] h-[500px] rounded-full pointer-events-none"
       style={{ background: "radial-gradient(ellipse at center, hsla(217,83%,50%,0.04) 0%, transparent 70%)" }} />
