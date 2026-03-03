@@ -32,7 +32,7 @@ const CARD_DARK = {
 
 const Solutions = () => (
   <section id="sviluppo-erp" className="scroll-mt-24 relative overflow-hidden py-3 md:py-5" style={{ background: "#F6FBFF" }}>
-    <div className="relative mx-auto w-[95%] rounded-[32px] md:rounded-[40px] py-20 md:py-28 overflow-hidden"
+    <div className="relative mx-auto w-[95%] rounded-[32px] md:rounded-[40px] py-14 md:py-20 overflow-hidden"
       style={{
         background: "linear-gradient(180deg, #0F162B 0%, #16234C 100%)",
         boxShadow: "0 24px 80px -12px hsla(226,46%,11%,0.35), 0 0 0 0.5px rgba(255,255,255,0.05)",
@@ -48,8 +48,8 @@ const Solutions = () => (
 
       <div className="container relative z-10">
         <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-semibold" style={{ color: "#FFFFFF", letterSpacing: "-0.025em", lineHeight: "1.15" }}>Le Nostre Soluzioni</h2>
-          <p className="mt-4 max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.7)", maxWidth: "32rem" }}>Tutto ciò che serve per digitalizzare la tua azienda, in un unico partner.</p>
+          <h2 className="text-3xl md:text-4xl font-medium" style={{ color: "#FFFFFF", letterSpacing: "-0.025em", lineHeight: "1.15" }}>Le Nostre Soluzioni</h2>
+          <p className="mt-4 mx-auto" style={{ color: "#FFFFFF", maxWidth: "80%" }}>Tutto ciò che serve per digitalizzare la tua azienda, in un unico partner.</p>
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
@@ -69,7 +69,7 @@ const Solutions = () => (
                   style={{ background: "rgba(255,255,255,0.1)", boxShadow: "inset 0 1px 0 0 rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.15)" }}>
                   <c.icon className="h-5 w-5" style={{ color: "#FFFFFF" }} />
                 </div>
-                <span className="text-[9px] font-semibold uppercase px-2.5 py-1 rounded-full"
+                <span className="text-[9px] font-medium uppercase px-2.5 py-1 rounded-full"
                   style={{
                     color: "rgba(255,255,255,0.85)",
                     background: "rgba(255,255,255,0.08)",
@@ -81,7 +81,7 @@ const Solutions = () => (
               </div>
 
               {/* Title */}
-              <h3 className="text-lg font-semibold mb-2" style={{ color: "#FFFFFF", letterSpacing: "-0.015em" }}>{c.title}</h3>
+              <h3 className="text-lg font-medium mb-2" style={{ color: "#FFFFFF", letterSpacing: "-0.015em" }}>{c.title}</h3>
 
               {/* Description */}
               <p className="text-sm leading-relaxed mb-5" style={{ color: "rgba(255,255,255,0.85)" }}>{c.desc}</p>
@@ -99,10 +99,10 @@ const Solutions = () => (
               {/* Text link CTA */}
               <button
                 onClick={() => document.querySelector("#contatti")?.scrollIntoView({ behavior: "smooth" })}
-                className="inline-flex items-center gap-1.5 text-sm font-semibold transition-colors duration-200"
-                style={{ color: "rgba(255,255,255,0.8)" }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "#FFFFFF")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.8)")}
+                className="inline-flex items-center gap-1.5 text-sm font-medium transition-colors duration-200"
+                style={{ color: "#FFFFFF" }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.7)")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "#FFFFFF")}
               >
                 Scopri di più
                 <ChevronRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
