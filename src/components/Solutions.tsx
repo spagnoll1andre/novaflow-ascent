@@ -4,23 +4,23 @@ import { Cog, Globe, Server, Headphones, ChevronRight } from "lucide-react";
 const cards = [
   {
     icon: Cog, title: "Sviluppo ERP", badge: "Core",
-    desc: "Implementazioni Odoo end-to-end per ogni funzione aziendale, dalla contabilità al magazzino.",
-    items: ["Contabilità & finanza", "Magazzino & produzione", "Vendite & CRM"],
+    desc: "Unifichiamo contabilità, magazzino, produzione e vendite in un'unica piattaforma Odoo su misura per la tua realtà aziendale.",
+    tags: ["Contabilità", "Magazzino", "Produzione", "Vendite"],
+  },
+  {
+    icon: Server, title: "Automazioni", badge: "Auto",
+    desc: "Eliminiamo il lavoro ripetitivo con custom actions, import/export Excel, modelli previsionali e workflow agentici basati su AI.",
+    tags: ["Custom Actions", "Import/Export", "Previsioni", "Agentic AI"],
   },
   {
     icon: Globe, title: "Digital Solutions", badge: "Digital",
-    desc: "Siti web, e-commerce e strumenti digitali su misura per il tuo business.",
-    items: ["E-commerce B2B/B2C", "Portali clienti", "Integrazioni API"],
-  },
-  {
-    icon: Server, title: "Architecture & Infrastructure", badge: "Cloud",
-    desc: "Infrastrutture cloud affidabili e scalabili per la tua azienda.",
-    items: ["Cloud hosting gestito", "CI/CD & DevOps", "Monitoraggio 24/7"],
+    desc: "Progettiamo siti web, eCommerce e app mobile per far crescere il tuo business online, integrati con il tuo gestionale ERP.",
+    tags: ["Web & eCommerce", "App Mobile", "Infrastruttura", "Integrazioni"],
   },
   {
     icon: Headphones, title: "Supporto al Cliente", badge: "Support",
-    desc: "Assistenza dedicata post go-live senza limiti di tempo.",
-    items: ["SLA garantiti", "Formazione continua", "Account manager dedicato"],
+    desc: "Formazione del team, assistenza post-rilascio e un punto di contatto dedicato che conosce la tua azienda e cresce con te.",
+    tags: ["Formazione", "Assistenza", "Point of Contact", "Post-vendita"],
   },
 ];
 
@@ -51,38 +51,46 @@ const Solutions = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.08 }}
-            className="group rounded-[24px] p-6 flex flex-col transition-all duration-200 ease-out hover:-translate-y-[2px] hover:shadow-[0_12px_40px_-8px_hsla(226,46%,11%,0.13)]"
+            className="group rounded-[24px] p-6 flex flex-col items-center text-center transition-all duration-200 ease-out hover:-translate-y-[2px] hover:shadow-[0_12px_40px_-8px_hsla(226,46%,11%,0.13)]"
             style={CARD}
           >
-            <div className="flex items-start justify-between mb-4">
-              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center"
-                style={{ boxShadow: "inset 0 1px 0 0 rgba(255,255,255,0.6)" }}>
-                <c.icon className="h-5 w-5 text-primary" />
-              </div>
-              <span className="text-[9px] font-semibold uppercase text-primary/60 bg-primary/5 border border-primary/10 px-2.5 py-1 rounded-full"
-                style={{ letterSpacing: "0.08em" }}>
-                {c.badge}
-              </span>
+            {/* Icon */}
+            <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center mb-5"
+              style={{ boxShadow: "inset 0 1px 0 0 rgba(255,255,255,0.6)" }}>
+              <c.icon className="h-6 w-6 text-primary" />
             </div>
 
-            <h3 className="text-lg font-bold text-foreground mb-2" style={{ letterSpacing: "-0.015em" }}>{c.title}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-4">{c.desc}</p>
+            {/* Title */}
+            <h3 className="text-lg font-bold text-foreground mb-3" style={{ letterSpacing: "-0.015em" }}>{c.title}</h3>
 
-            <ul className="space-y-2 mb-5 flex-1">
-              {c.items.map((item) => (
-                <li key={item} className="text-sm text-foreground/75 flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-primary/50 shrink-0" />
-                  {item}
-                </li>
+            {/* Description */}
+            <p className="text-sm text-muted-foreground leading-relaxed mb-5">{c.desc}</p>
+
+            {/* Tags */}
+            <div className="flex flex-wrap justify-center gap-2 mb-6 flex-1">
+              {c.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold text-primary/80"
+                  style={{
+                    background: "rgba(255,255,255,0.7)",
+                    border: "1px solid hsla(217,83%,50%,0.15)",
+                    boxShadow: "0 1px 4px 0 hsla(226,46%,11%,0.04), inset 0 1px 0 0 rgba(255,255,255,0.9)",
+                    letterSpacing: "0.02em",
+                  }}
+                >
+                  {tag}
+                </span>
               ))}
-            </ul>
+            </div>
 
+            {/* CTA Button */}
             <button
               onClick={() => document.querySelector("#contatti")?.scrollIntoView({ behavior: "smooth" })}
-              className="inline-flex items-center gap-1 text-sm font-semibold text-primary/70 group-hover:text-primary transition-colors duration-200"
+              className="w-full py-3 rounded-xl bg-primary text-primary-foreground font-semibold text-sm flex items-center justify-center gap-2 hover:bg-primary/90 transition-colors duration-200"
             >
               Scopri di più
-              <ChevronRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+              <ChevronRight className="h-4 w-4" />
             </button>
           </motion.div>
         ))}
