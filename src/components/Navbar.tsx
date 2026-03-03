@@ -4,13 +4,11 @@ import { Button } from "@/components/ui/button";
 import logo from "@/assets/novaflow-logo.jpg";
 
 const navItems = [
-  { label: "Home", href: "#hero" },
   { label: "Chi Siamo", href: "#chi-siamo" },
   { label: "Sviluppo ERP", href: "#sviluppo-erp" },
   { label: "Automazioni", href: "#automazioni" },
   { label: "Altri Servizi", href: "#altri-servizi" },
   { label: "Soluzioni Verticali", href: "#soluzioni-verticali" },
-  { label: "Contatti", href: "#contatti" },
 ];
 
 const Navbar = () => {
