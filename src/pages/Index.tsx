@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import PoweredByOdoo from "@/components/PoweredByOdoo";
 import ProblemSolution from "@/components/ProblemSolution";
+import WhatWeDo from "@/components/WhatWeDo";
 import Solutions from "@/components/Solutions";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import HowWeWork from "@/components/HowWeWork";
@@ -25,6 +26,7 @@ const Index = () => (
       <HeroSection />
       <PoweredByOdoo />
       <ProblemSolution />
+      <WhatWeDo />
       <Solutions />
       <WhyChooseUs />
       <HowWeWork />
