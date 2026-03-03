@@ -5,13 +5,23 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
+const CARD = {
+  background: "rgba(255,255,255,0.7)",
+  boxShadow: "0 12px 48px -8px hsla(226,46%,11%,0.08), 0 1px 3px 0 hsla(226,46%,11%,0.03), inset 0 1px 0 0 rgba(255,255,255,0.9)",
+  border: "1px solid rgba(218,225,240,0.5)",
+};
+
 const ContactForm = () => (
   <section id="contatti" className="scroll-mt-24 py-20 md:py-28 relative overflow-hidden" style={{ background: "#F6FBFF" }}>
-    <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full pointer-events-none"
+    {/* Ambient lights */}
+    <div className="absolute top-[-10%] left-[40%] w-[600px] h-[400px] rounded-full pointer-events-none"
       style={{ background: "radial-gradient(ellipse at center, hsla(217,83%,50%,0.04) 0%, transparent 70%)" }} />
+    <div className="absolute bottom-[10%] right-[25%] w-[400px] h-[300px] rounded-full pointer-events-none"
+      style={{ background: "radial-gradient(ellipse at center, hsla(230,60%,55%,0.03) 0%, transparent 70%)" }} />
+
     <div className="container max-w-2xl relative z-10">
       <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground">Contattaci</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ letterSpacing: "-0.025em", lineHeight: "1.15" }}>Contattaci</h2>
         <p className="mt-4 text-muted-foreground">Compila il form e ti ricontatteremo entro 24 ore.</p>
       </motion.div>
 
@@ -19,8 +29,8 @@ const ContactForm = () => (
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="space-y-5 rounded-[28px] border p-8"
-        style={{ background: "rgba(255,255,255,0.85)", boxShadow: "0 4px 32px -4px hsla(226,46%,11%,0.08)", borderColor: "hsla(218,53%,90%,0.7)" }}
+        className="space-y-5 rounded-[28px] p-8"
+        style={CARD}
         onSubmit={(e) => e.preventDefault()}
       >
         <div className="grid sm:grid-cols-2 gap-5">
@@ -64,8 +74,11 @@ const ContactForm = () => (
           <Textarea id="messaggio" placeholder="Descrivici le tue esigenze..." className="rounded-xl min-h-[120px]" />
         </div>
 
-        <Button type="submit" size="lg" className="rounded-full w-full sm:w-auto px-10 shadow-[0_2px_16px_0_hsl(217_83%_50%/0.25)] hover:shadow-[0_4px_24px_0_hsl(217_83%_50%/0.35)] transition-all duration-200"
-          style={{ background: "linear-gradient(135deg, hsl(217 83% 50%), hsl(217 83% 58%))" }}>
+        <Button type="submit" size="lg" className="rounded-full w-full sm:w-auto px-10 transition-all duration-[220ms] ease-out hover:-translate-y-[1px]"
+          style={{
+            background: "linear-gradient(135deg, hsl(217 83% 50%), hsl(217 83% 58%))",
+            boxShadow: "0 4px 20px -4px hsl(217 83% 50% / 0.35), inset 0 1px 0 0 hsl(217 83% 70% / 0.3)",
+          }}>
           Invia richiesta
         </Button>
       </motion.form>
