@@ -4,8 +4,8 @@ import { ArrowRight } from "lucide-react";
 import logo from "@/assets/novaflow-logo.jpg";
 
 const cols = [
-{ title: "Soluzioni", links: ["ERP Odoo", "Digital Solutions", "Infrastruttura", "Supporto"] },
-{ title: "Verticali", links: ["Manifatturiero", "Retail", "Servizi", "E-commerce"] },
+{ title: "Soluzioni", links: ["ERP Odoo", "Digital Solutions", "Infrastruttura", "Automazioni"] },
+{ title: "Verticali", links: ["Produzione", "Distrubuzione", "IoT", "E-commerce"] },
 { title: "Azienda", links: ["Chi siamo", "Case Study", "Blog", "Lavora con noi"] },
 { title: "Legale", links: ["Privacy Policy", "Termini di Servizio", "Cookie Policy"] }];
 
