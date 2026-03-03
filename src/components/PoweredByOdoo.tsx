@@ -43,8 +43,8 @@ const PoweredByOdoo = () => (
             }}>
             POWERED BY ODOO
           </span>
-          <p className="mt-8 text-xl md:text-2xl font-medium max-w-3xl mx-auto leading-relaxed"
-            style={{ color: "#FFFFFF", letterSpacing: "-0.01em" }}>
+          <p className="mt-8 text-xl md:text-2xl font-medium mx-auto leading-relaxed"
+            style={{ color: "#FFFFFF", letterSpacing: "-0.01em", maxWidth: "80%" }}>
             Come partner Odoo, realizziamo soluzioni ERP di eccellenza, customizzate per le tue esigenze
           </p>
         </motion.div>
@@ -75,8 +75,8 @@ const PoweredByOdoo = () => (
           </motion.div>
         </div>
 
-        <p className="mt-10 text-xl md:text-2xl font-medium max-w-3xl mx-auto leading-relaxed"
-          style={{ color: "#FFFFFF", letterSpacing: "-0.01em" }}>
+        <p className="mt-10 text-xl md:text-2xl font-medium mx-auto leading-relaxed"
+          style={{ color: "#FFFFFF", letterSpacing: "-0.01em", maxWidth: "80%" }}>
           Offriamo la potenza e l'affidabilità di Odoo, il software scelto da oltre 12 milioni di utenti in tutto il mondo, adattato alla tua realtà
         </p>
       </div>

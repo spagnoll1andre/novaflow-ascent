@@ -34,6 +34,10 @@ const chips = [
   "Costi prevedibili",
   "Integrazione nativa",
   "Supporto dedicato",
+  "Assistenza post-vendita",
+  "Customizzazione reale",
+  "Facilità d'uso",
+  "Privacy garantita",
 ];
 
 const WhatWeDo = () => (
@@ -76,13 +80,7 @@ const WhatWeDo = () => (
             className="rounded-[24px] p-7 transition-all duration-200 ease-out hover:-translate-y-[2px] hover:shadow-[0_12px_40px_-8px_hsla(226,46%,11%,0.13)]"
             style={CARD}
           >
-            <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4"
-              style={{
-                background: "linear-gradient(135deg, hsla(217,83%,50%,0.1), hsla(217,83%,50%,0.05))",
-                border: "1px solid hsla(217,83%,50%,0.12)",
-              }}>
-              <card.icon className="h-5 w-5 text-primary" />
-            </div>
+            <card.icon className="h-6 w-6 text-primary mb-4" />
             <h3 className="text-lg font-bold text-foreground mb-2" style={{ letterSpacing: "-0.015em" }}>
               {card.title}
             </h3>
