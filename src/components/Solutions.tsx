@@ -51,46 +51,44 @@ const Solutions = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.08 }}
-            className="group rounded-[24px] p-6 flex flex-col items-center text-center transition-all duration-200 ease-out hover:-translate-y-[2px] hover:shadow-[0_12px_40px_-8px_hsla(226,46%,11%,0.13)]"
+            className="group rounded-[24px] p-7 flex flex-col transition-all duration-200 ease-out hover:-translate-y-[2px] hover:shadow-[0_12px_40px_-8px_hsla(226,46%,11%,0.13)]"
             style={CARD}
           >
-            {/* Icon */}
-            <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center mb-5"
-              style={{ boxShadow: "inset 0 1px 0 0 rgba(255,255,255,0.6)" }}>
-              <c.icon className="h-6 w-6 text-primary" />
+            {/* Header: icon left, badge right */}
+            <div className="flex items-start justify-between mb-5">
+              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center"
+                style={{ boxShadow: "inset 0 1px 0 0 rgba(255,255,255,0.6)" }}>
+                <c.icon className="h-5 w-5 text-primary" />
+              </div>
+              <span className="text-[9px] font-semibold uppercase text-primary/60 bg-primary/5 border border-primary/10 px-2.5 py-1 rounded-full"
+                style={{ letterSpacing: "0.08em" }}>
+                {c.badge}
+              </span>
             </div>
 
             {/* Title */}
-            <h3 className="text-lg font-bold text-foreground mb-3" style={{ letterSpacing: "-0.015em" }}>{c.title}</h3>
+            <h3 className="text-lg font-bold text-foreground mb-2" style={{ letterSpacing: "-0.015em" }}>{c.title}</h3>
 
             {/* Description */}
             <p className="text-sm text-muted-foreground leading-relaxed mb-5">{c.desc}</p>
 
-            {/* Tags */}
-            <div className="flex flex-wrap justify-center gap-2 mb-6 flex-1">
+            {/* Bullet items */}
+            <ul className="space-y-2.5 mb-5 flex-1">
               {c.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold text-primary/80"
-                  style={{
-                    background: "rgba(255,255,255,0.7)",
-                    border: "1px solid hsla(217,83%,50%,0.15)",
-                    boxShadow: "0 1px 4px 0 hsla(226,46%,11%,0.04), inset 0 1px 0 0 rgba(255,255,255,0.9)",
-                    letterSpacing: "0.02em",
-                  }}
-                >
+                <li key={tag} className="text-sm text-foreground/75 flex items-center gap-2.5">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary/50 shrink-0" />
                   {tag}
-                </span>
+                </li>
               ))}
-            </div>
+            </ul>
 
-            {/* CTA Button */}
+            {/* Text link CTA */}
             <button
               onClick={() => document.querySelector("#contatti")?.scrollIntoView({ behavior: "smooth" })}
-              className="w-full py-3 rounded-xl bg-primary text-primary-foreground font-semibold text-sm flex items-center justify-center gap-2 hover:bg-primary/90 transition-colors duration-200"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary/70 group-hover:text-primary transition-colors duration-200"
             >
               Scopri di più
-              <ChevronRight className="h-4 w-4" />
+              <ChevronRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
             </button>
           </motion.div>
         ))}
