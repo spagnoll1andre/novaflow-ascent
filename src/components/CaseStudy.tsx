@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
 
 const cases = [
-  { title: "Azienda Manifatturiera", desc: "Riduzione del 40% dei tempi di gestione ordini con ERP integrato.", tag: "Manufacturing" },
-  { title: "Catena Retail", desc: "Unificazione di 12 punti vendita su piattaforma unica in 8 settimane.", tag: "Retail" },
-  { title: "Studio Professionale", desc: "Digitalizzazione completa della fatturazione e timesheet.", tag: "Servizi" },
-  { title: "E-commerce B2B", desc: "Integrazione magazzino-sito con sync automatico in tempo reale.", tag: "E-commerce" },
+  { title: "Azienda Manifatturiera", desc: "Riduzione dei tempi di gestione ordini con ERP integrato.", tag: "Manufacturing", metric: "-40%", metricLabel: "tempi gestione" },
+  { title: "Catena Retail", desc: "Unificazione di 12 punti vendita su piattaforma unica in 8 settimane.", tag: "Retail", metric: "12→1", metricLabel: "piattaforma unica" },
+  { title: "Studio Professionale", desc: "Digitalizzazione completa della fatturazione e timesheet.", tag: "Servizi", metric: "+65%", metricLabel: "efficienza" },
+  { title: "E-commerce B2B", desc: "Integrazione magazzino-sito con sync automatico in tempo reale.", tag: "E-commerce", metric: "Real-time", metricLabel: "sync magazzino" },
 ];
 
-const cardStyle = {
+const cardBase = {
   background: "rgba(255,255,255,0.85)",
-  boxShadow: "0 4px 32px -4px hsla(226,46%,11%,0.08), 0 1px 3px 0 hsla(226,46%,11%,0.03)",
+  boxShadow: "0 4px 32px -4px hsla(226,46%,11%,0.07), 0 1px 3px 0 hsla(226,46%,11%,0.03)",
   borderColor: "hsla(218,53%,90%,0.7)",
 };
 
@@ -30,11 +30,19 @@ const CaseStudy = () => (
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
             className="rounded-[28px] border p-6 transition-all duration-[220ms] ease-out hover:-translate-y-[2px] hover:shadow-[0_8px_40px_-4px_hsla(226,46%,11%,0.13),0_1px_4px_0_hsla(226,46%,11%,0.05)] hover:border-primary/20"
-            style={cardStyle}
+            style={cardBase}
           >
-            <span className="text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">{c.tag}</span>
-            <h3 className="mt-4 font-bold text-foreground text-lg">{c.title}</h3>
-            <p className="mt-2 text-sm text-muted-foreground">{c.desc}</p>
+            <div className="flex items-center justify-between mb-4">
+              <span className="text-[10px] font-semibold uppercase tracking-wider text-primary bg-primary/8 border border-primary/10 px-3 py-1 rounded-full">
+                {c.tag}
+              </span>
+              <div className="text-right">
+                <p className="text-xl font-extrabold text-primary leading-none">{c.metric}</p>
+                <p className="text-[10px] text-muted-foreground mt-0.5 font-medium">{c.metricLabel}</p>
+              </div>
+            </div>
+            <h3 className="font-bold text-foreground text-lg">{c.title}</h3>
+            <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{c.desc}</p>
           </motion.div>
         ))}
       </div>
