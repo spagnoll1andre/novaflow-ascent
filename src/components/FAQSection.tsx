@@ -24,13 +24,12 @@ const FAQSection = () => (
 
       <div className="container max-w-3xl relative z-10">
         <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
-          <span className="inline-block px-8 py-3 rounded-full text-sm font-semibold uppercase"
+          <span className="inline-block px-5 py-1.5 rounded-full text-xs font-semibold uppercase"
             style={{
               color: "#FFFFFF",
-              background: "rgba(255,255,255,0.12)",
-              border: "1px solid rgba(255,255,255,0.25)",
-              boxShadow: "0 4px 16px -2px rgba(0,0,0,0.4), inset 0 1px 0 0 rgba(255,255,255,0.2), inset 0 -1px 0 0 rgba(0,0,0,0.15)",
-              letterSpacing: "0.12em",
+              background: "rgba(255,255,255,0.10)",
+              border: "1px solid rgba(255,255,255,0.20)",
+              letterSpacing: "0.10em",
             }}>
             FAQ
           </span>
