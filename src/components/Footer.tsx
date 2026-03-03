@@ -207,7 +207,7 @@ const Footer = () =>
       {/* Bottom bar */}
       <div className="container pb-8">
         <div style={{ height: "1px", background: "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.08) 30%, rgba(255,255,255,0.08) 70%, transparent 100%)" }} />
-        <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-primary-foreground">
           <p className="text-xs" style={{ color: "rgba(255,255,255,0.35)" }}>
             © {new Date().getFullYear()} – NovaFlow
           </p>
