@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Instagram } from "lucide-react";
+import { ArrowRight, Instagram, Linkedin } from "lucide-react";
 import darkLogo from "@/assets/novaflow-logo-dark.png";
 
 const cols = [
@@ -122,7 +122,7 @@ const Footer = () =>
     </div>
 
     {/* Footer — dark continuous section */}
-    <div style={{ background: "linear-gradient(180deg, transparent 0%, #0D1220 30%, #0A0E1A 100%)" }}>
+    <div style={{ background: "linear-gradient(180deg, rgba(13,18,32,0) 0%, rgba(13,18,32,0.4) 8%, rgba(13,18,32,0.75) 20%, #0D1220 40%, #0B0F1C 70%, #0A0E1A 100%)" }}>
       {/* Large logo watermark */}
       <div className="container pt-4 md:pt-6 pb-8">
         <motion.div
@@ -157,8 +157,7 @@ const Footer = () =>
             <div className="mt-5 flex items-center gap-3">
               {[
             { icon: <Instagram className="h-4 w-4" />, label: "Instagram" },
-            { icon: <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>, label: "X" },
-            { icon: <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61.01 3.91.04.6.02 1.19.07 1.77.17.56.1 1.09.27 1.57.54.48.27.89.62 1.24 1.03.35.41.62.88.8 1.39.18.51.29 1.04.34 1.58.1 1.13.14 2.26.14 3.4v4.66c0 1.14-.04 2.27-.14 3.4-.05.54-.16 1.07-.34 1.58-.18.51-.45.98-.8 1.39-.35.41-.76.76-1.24 1.03-.48.27-1.01.44-1.57.54-.58.1-1.17.15-1.77.17-1.3.03-2.6.05-3.91.04-1.31.01-2.61-.01-3.91-.04-.6-.02-1.19-.07-1.77-.17-.56-.1-1.09-.27-1.57-.54-.48-.27-.89-.62-1.24-1.03-.35-.41-.62-.88-.8-1.39-.18-.51-.29-1.04-.34-1.58C.14 16.93.1 15.8.1 14.66V9.99c0-1.14.04-2.27.14-3.4.05-.54.16-1.07.34-1.58.18-.51.45-.98.8-1.39.35-.41.76-.76 1.24-1.03.48-.27 1.01-.44 1.57-.54.58-.1 1.17-.15 1.77-.17C7.315.03 8.615.01 9.925.02h2.6zm-2.34 5.57v6.93l5.92-3.47-5.92-3.46z" /></svg>, label: "TikTok" }].
+            { icon: <Linkedin className="h-4 w-4" />, label: "LinkedIn" }].
             map((s) =>
             <a
               key={s.label}
