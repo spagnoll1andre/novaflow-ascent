@@ -4,8 +4,9 @@ import { Cog, Globe, Server, Headphones, ChevronRight } from "lucide-react";
 const cards = [
   {
     icon: Cog, title: "Sviluppo ERP", badge: "Core",
-    desc: "Implementazioni Odoo end-to-end per ogni funzione aziendale.",
+    desc: "Implementazioni Odoo end-to-end per ogni funzione aziendale. Dalla contabilità al magazzino, ogni processo diventa digitale.",
     items: ["Contabilità & finanza", "Magazzino & produzione", "Vendite & CRM"],
+    primary: true,
   },
   {
     icon: Globe, title: "Digital Solutions", badge: "Digital",
@@ -44,47 +45,80 @@ const Solutions = () => (
         <p className="mt-4 text-muted-foreground max-w-xl mx-auto" style={{ maxWidth: "32rem" }}>Tutto ciò che serve per digitalizzare la tua azienda, in un unico partner.</p>
       </motion.div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        {cards.map((c, i) => (
+      {/* Bento grid */}
+      <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
+        {/* Primary card — spans 2 cols & 2 rows */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="group md:col-span-2 md:row-span-2 rounded-[28px] p-7 md:p-9 transition-all duration-[220ms] ease-out hover:-translate-y-[2px] hover:shadow-[0_12px_48px_-6px_hsla(226,46%,11%,0.13),0_1px_4px_0_hsla(226,46%,11%,0.05)]"
+          style={CARD}
+        >
+          <div className="flex items-start justify-between mb-5">
+            <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center"
+              style={{ boxShadow: "inset 0 1px 0 0 rgba(255,255,255,0.6)" }}>
+              <Cog className="h-6 w-6 text-primary" />
+            </div>
+            <span className="text-[10px] font-semibold uppercase text-primary/60 bg-primary/5 border border-primary/10 px-3 py-1.5 rounded-full"
+              style={{ letterSpacing: "0.08em" }}>
+              Core
+            </span>
+          </div>
+
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground" style={{ letterSpacing: "-0.02em" }}>Sviluppo ERP</h3>
+          <p className="mt-3 text-base text-muted-foreground leading-relaxed" style={{ maxWidth: "28rem" }}>
+            {cards[0].desc}
+          </p>
+          <ul className="mt-6 space-y-2.5">
+            {cards[0].items.map((item) => (
+              <li key={item} className="text-sm text-foreground/75 flex items-center gap-2.5">
+                <span className="h-1.5 w-1.5 rounded-full bg-primary/50 shrink-0" />
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <button
+            onClick={() => document.querySelector("#contatti")?.scrollIntoView({ behavior: "smooth" })}
+            className="mt-7 inline-flex items-center gap-1.5 text-sm font-semibold text-primary/70 group-hover:text-primary transition-colors duration-200"
+          >
+            Scopri di più
+            <ChevronRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+          </button>
+        </motion.div>
+
+        {/* Secondary cards */}
+        {cards.slice(1).map((c, i) => (
           <motion.div
             key={c.title}
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.08 }}
-            className="group rounded-[28px] p-6 transition-all duration-[220ms] ease-out hover:-translate-y-[2px] hover:shadow-[0_12px_48px_-6px_hsla(226,46%,11%,0.13),0_1px_4px_0_hsla(226,46%,11%,0.05)] hover:border-primary/20"
+            transition={{ delay: 0.1 + i * 0.08 }}
+            className="group rounded-[24px] p-5 transition-all duration-[220ms] ease-out hover:-translate-y-[2px] hover:shadow-[0_12px_48px_-6px_hsla(226,46%,11%,0.13),0_1px_4px_0_hsla(226,46%,11%,0.05)]"
             style={CARD}
           >
-            {/* Icon + badge row */}
-            <div className="flex items-start justify-between mb-4">
-              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center"
+            <div className="flex items-start justify-between mb-3">
+              <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center"
                 style={{ boxShadow: "inset 0 1px 0 0 rgba(255,255,255,0.6)" }}>
-                <c.icon className="h-5 w-5 text-primary" />
+                <c.icon className="h-4.5 w-4.5 text-primary" />
               </div>
-              <span className="text-[10px] font-semibold uppercase text-primary/60 bg-primary/5 border border-primary/10 px-2.5 py-1 rounded-full"
+              <span className="text-[9px] font-semibold uppercase text-primary/60 bg-primary/5 border border-primary/10 px-2 py-0.5 rounded-full"
                 style={{ letterSpacing: "0.08em" }}>
                 {c.badge}
               </span>
             </div>
 
-            <h3 className="text-lg font-bold text-foreground" style={{ letterSpacing: "-0.01em" }}>{c.title}</h3>
-            <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{c.desc}</p>
-            <ul className="mt-4 space-y-1.5">
-              {c.items.map((item) => (
-                <li key={item} className="text-sm text-foreground/75 flex items-center gap-2">
-                  <span className="h-1 w-1 rounded-full bg-primary/50 shrink-0" />
-                  {item}
-                </li>
-              ))}
-            </ul>
+            <h3 className="text-base font-bold text-foreground" style={{ letterSpacing: "-0.01em" }}>{c.title}</h3>
+            <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed">{c.desc}</p>
 
-            {/* Link */}
             <button
               onClick={() => document.querySelector("#contatti")?.scrollIntoView({ behavior: "smooth" })}
-              className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-primary/70 group-hover:text-primary transition-colors duration-200"
+              className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-primary/70 group-hover:text-primary transition-colors duration-200"
             >
               Scopri di più
-              <ChevronRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
+              <ChevronRight className="h-3 w-3 transition-transform duration-200 group-hover:translate-x-0.5" />
             </button>
           </motion.div>
         ))}
