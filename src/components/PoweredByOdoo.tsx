@@ -17,8 +17,8 @@ const logos = [
 const doubled = [...logos, ...logos];
 
 const PoweredByOdoo = () => (
-  <section id="powered-by-odoo" className="scroll-mt-24 relative overflow-hidden py-6 md:py-10" style={{ background: "#F6FBFF" }}>
-    <div className="relative mx-auto w-[95%] rounded-[32px] md:rounded-[40px] py-12 md:py-16 overflow-hidden"
+  <section id="powered-by-odoo" className="scroll-mt-24 relative overflow-hidden py-3 md:py-5" style={{ background: "#F6FBFF" }}>
+    <div className="relative mx-auto w-[95%] rounded-[32px] md:rounded-[40px] py-8 md:py-12 overflow-hidden"
       style={{
         background: "linear-gradient(180deg, #0F162B 0%, #16234C 100%)",
         boxShadow: "0 24px 80px -12px hsla(226,46%,11%,0.35), 0 0 0 0.5px rgba(255,255,255,0.05)",
@@ -33,7 +33,7 @@ const PoweredByOdoo = () => (
 
       <div className="container text-center relative z-10">
         <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
-          <span className="inline-block px-8 py-3 rounded-full text-sm font-semibold uppercase"
+          <span className="inline-block px-8 py-2 rounded-full text-sm font-semibold uppercase"
             style={{
               color: "#FFFFFF",
               background: "rgba(255,255,255,0.12)",
@@ -68,15 +68,15 @@ const PoweredByOdoo = () => (
                 key={`${logo.name}-${i}`}
                 src={logo.src}
                 alt={logo.name}
-                className="h-10 md:h-12 w-auto object-contain shrink-0"
-                style={{ opacity: 0.5, filter: "brightness(1.5) grayscale(0.2)" }}
+                className="h-14 md:h-16 w-auto object-contain shrink-0"
+                style={{ opacity: 0.7, filter: "brightness(2) grayscale(1) contrast(1.2)" }}
               />
             ))}
           </motion.div>
         </div>
 
-        <p className="mt-10 text-sm md:text-base max-w-2xl mx-auto leading-relaxed"
-          style={{ color: "#FFFFFF", maxWidth: "38rem" }}>
+        <p className="mt-10 text-xl md:text-2xl font-medium max-w-3xl mx-auto leading-relaxed"
+          style={{ color: "#FFFFFF", letterSpacing: "-0.01em" }}>
           Offriamo la potenza e l'affidabilità di Odoo, il software scelto da oltre 12 milioni di utenti in tutto il mondo, adattato alla tua realtà
         </p>
       </div>
