@@ -77,8 +77,9 @@ const ContactForm = () => (
         <div className="text-center pt-2">
           <Button type="submit" size="lg" className="rounded-full px-10 transition-all duration-200 ease-out hover:-translate-y-[1px]"
             style={{
-              background: "linear-gradient(135deg, hsl(217 83% 50%), hsl(217 83% 58%))",
-              boxShadow: "0 4px 20px -4px hsl(217 83% 50% / 0.35), inset 0 1px 0 0 hsl(217 83% 70% / 0.3)",
+              background: "linear-gradient(180deg, hsl(217 83% 62%), hsl(217 83% 50%))",
+              boxShadow: "0 4px 20px -4px hsl(217 83% 50% / 0.4), 0 0 0 0.5px hsl(217 83% 50% / 0.2), inset 0 1px 0 0 hsl(217 83% 75% / 0.4)",
+              border: "1px solid hsl(217 83% 60% / 0.3)",
             }}>
             Invia richiesta
           </Button>
