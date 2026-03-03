@@ -6,8 +6,10 @@ import ProblemSolution from "@/components/ProblemSolution";
 import WhatWeDo from "@/components/WhatWeDo";
 import Solutions from "@/components/Solutions";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import OurNumbers from "@/components/OurNumbers";
 import HowWeWork from "@/components/HowWeWork";
 import CaseStudy from "@/components/CaseStudy";
+import BlogSection from "@/components/BlogSection";
 import FAQSection from "@/components/FAQSection";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
@@ -29,8 +31,10 @@ const Index = () => (
       <WhatWeDo />
       <Solutions />
       <WhyChooseUs />
+      <OurNumbers />
       <HowWeWork />
       <CaseStudy />
+      <BlogSection />
       <FAQSection />
       <ContactForm />
     </main>
