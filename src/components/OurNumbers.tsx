@@ -32,7 +32,7 @@ const variantStyles: Record<string, React.CSSProperties> = {
 };
 
 const OurNumbers = () => (
-  <section className="py-20 md:py-28 relative overflow-hidden" style={{ background: "#F6FBFF" }}>
+  <section className="py-24 md:py-32 relative overflow-hidden" style={{ background: "#F6FBFF" }}>
     <div className="container relative z-10">
       <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
         <span className="text-xs font-semibold uppercase text-primary tracking-[0.12em]">I nostri numeri</span>
@@ -45,12 +45,12 @@ const OurNumbers = () => (
       </motion.div>
 
       {/* Bento grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
         {/* Row 1: 1 + 2 span */}
         <motion.div
           initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-          className="rounded-[24px] p-6 md:p-8"
-          style={{ ...variantStyles.primary, boxShadow: "0 8px 40px -8px hsl(217 83% 50% / 0.25)" }}
+          className="rounded-[24px] p-6 md:p-8 transition-all duration-200 ease-out hover:-translate-y-[2px]"
+          style={{ ...variantStyles.primary, boxShadow: "0 8px 32px -8px hsl(217 83% 50% / 0.25)" }}
         >
           <p className="text-4xl md:text-5xl font-extrabold leading-tight">5+</p>
           <p className="mt-3 font-bold text-sm">Anni di esperienza</p>
@@ -59,8 +59,8 @@ const OurNumbers = () => (
 
         <motion.div
           initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.05 }}
-          className="rounded-[24px] p-6 md:p-8 sm:col-span-1 lg:col-span-2"
-          style={{ ...variantStyles.dark, boxShadow: "0 8px 40px -8px hsla(226,46%,11%,0.2)" }}
+          className="rounded-[24px] p-6 md:p-8 sm:col-span-1 lg:col-span-2 transition-all duration-200 ease-out hover:-translate-y-[2px]"
+          style={{ ...variantStyles.dark, boxShadow: "0 8px 32px -8px hsla(226,46%,11%,0.2)" }}
         >
           <p className="text-4xl md:text-5xl font-extrabold leading-tight">30+</p>
           <p className="mt-3 font-bold text-sm">Clienti PMI seguiti</p>
@@ -75,7 +75,7 @@ const OurNumbers = () => (
           <motion.div
             key={s.value}
             initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 + i * 0.05 }}
-            className="rounded-[24px] p-6 md:p-8"
+            className="rounded-[24px] p-6 md:p-8 transition-all duration-200 ease-out hover:-translate-y-[2px]"
             style={variantStyles[s.v]}
           >
             <p className="text-4xl md:text-5xl font-extrabold leading-tight" style={s.v === "accent" ? { color: "hsl(217 83% 50%)" } : undefined}>

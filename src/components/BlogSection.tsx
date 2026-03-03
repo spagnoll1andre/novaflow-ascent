@@ -29,7 +29,7 @@ const posts = [
 ];
 
 const BlogSection = () => (
-  <section className="py-20 md:py-28 relative overflow-hidden" style={{ background: "#F6FBFF" }}>
+  <section className="py-24 md:py-32 relative overflow-hidden" style={{ background: "#F6FBFF" }}>
     <div className="container relative z-10">
       <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
         <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-semibold bg-foreground text-background">BLOG</span>
@@ -47,7 +47,7 @@ const BlogSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.07 }}
-            className="rounded-[24px] p-6 flex flex-col justify-between min-h-[340px] group transition-all duration-[220ms] ease-out hover:-translate-y-[2px] hover:shadow-[0_12px_48px_-6px_hsla(226,46%,11%,0.3)]"
+            className="rounded-[24px] p-6 flex flex-col justify-between min-h-[340px] group transition-all duration-200 ease-out hover:-translate-y-[2px] hover:shadow-[0_12px_40px_-8px_hsla(226,46%,11%,0.3)]"
             style={{ background: p.bg }}
           >
             <div>

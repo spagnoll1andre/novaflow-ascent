@@ -15,7 +15,7 @@ const clients = ["Tada", "Stemau", "Kosmail", "Fraglia"];
 const Footer = () => (
   <footer>
     {/* Dark CTA section */}
-    <div className="relative overflow-hidden py-20 md:py-28" style={{ background: "linear-gradient(135deg, hsl(226 46% 11%), hsl(226 40% 18%))" }}>
+    <div className="relative overflow-hidden py-24 md:py-32" style={{ background: "linear-gradient(135deg, hsl(226 46% 11%), hsl(226 40% 18%))" }}>
       {/* Subtle noise / vignette */}
       <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at 70% 50%, hsla(217,83%,50%,0.06) 0%, transparent 60%)" }} />
 
@@ -42,7 +42,7 @@ const Footer = () => (
           <div className="mt-8 flex flex-wrap gap-4">
             <Button
               size="lg"
-              className="rounded-full px-8 transition-all duration-[220ms] ease-out hover:-translate-y-[1px]"
+              className="rounded-full px-8 transition-all duration-200 ease-out hover:-translate-y-[1px] hover:bg-[rgba(255,255,255,0.18)]"
               onClick={() => document.querySelector("#contatti")?.scrollIntoView({ behavior: "smooth" })}
               style={{
                 background: "rgba(255,255,255,0.12)",
@@ -57,7 +57,7 @@ const Footer = () => (
             <Button
               size="lg"
               variant="outline"
-              className="rounded-full px-8 transition-all duration-[220ms] ease-out hover:-translate-y-[1px]"
+              className="rounded-full px-8 transition-all duration-200 ease-out hover:-translate-y-[1px] hover:bg-[rgba(255,255,255,0.1)]"
               onClick={() => document.querySelector("#contatti")?.scrollIntoView({ behavior: "smooth" })}
               style={{
                 background: "rgba(255,255,255,0.06)",

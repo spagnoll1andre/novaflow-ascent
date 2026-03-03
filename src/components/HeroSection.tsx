@@ -68,7 +68,7 @@ const HeroSection = () => {
 
           {/* CTAs */}
           <div className="mt-8 flex flex-wrap gap-4">
-            <Button size="lg" className="rounded-full px-8 transition-all duration-[220ms] ease-out hover:-translate-y-[1px]"
+            <Button size="lg" className="rounded-full px-8 transition-all duration-200 ease-out hover:-translate-y-[1px]"
               onClick={() => scrollTo("#contatti")}
               style={{
                 background: "linear-gradient(135deg, hsl(217 83% 50%), hsl(217 83% 58%))",
@@ -78,7 +78,7 @@ const HeroSection = () => {
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <Button size="lg" variant="outline"
-              className="rounded-full px-8 border-border hover:border-primary/40 hover:bg-primary/5 transition-all duration-[220ms] ease-out"
+              className="rounded-full px-8 border-border hover:border-primary/40 hover:bg-primary/5 transition-all duration-200 ease-out"
               onClick={() => scrollTo("#contatti")}>
               Prenota una demo
             </Button>
