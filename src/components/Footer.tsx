@@ -40,9 +40,9 @@ const Footer = () =>
 
             {/* Client chips */}
             <div className="mt-6 flex flex-wrap items-center gap-2.5">
-              <span className="text-xs" style={{ color: "rgba(255,255,255,0.4)" }}>Già al fianco di:</span>
+              <span className="text-primary-foreground text-sm" style={{ color: "rgba(255,255,255,0.4)" }}>Già al fianco di:</span>
               {clients.map((c) =>
-            <span key={c} className="px-3 py-1 rounded-full text-xs font-medium" style={{ color: "rgba(255,255,255,0.7)", border: "1px solid rgba(255,255,255,0.15)" }}>{c}</span>
+            <span key={c} className="px-3 py-1 rounded-full font-medium text-primary-foreground text-sm" style={{ color: "rgba(255,255,255,0.7)", border: "1px solid rgba(255,255,255,0.15)" }}>{c}</span>
             )}
             </div>
 
