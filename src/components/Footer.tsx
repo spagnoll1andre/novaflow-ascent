@@ -122,7 +122,7 @@ const Footer = () =>
     </div>
 
     {/* Footer — dark continuous section */}
-    <div style={{ background: "linear-gradient(180deg, rgba(13,18,32,0) 0%, rgba(13,18,32,0.4) 8%, rgba(13,18,32,0.75) 20%, #0D1220 40%, #0B0F1C 70%, #0A0E1A 100%)" }}>
+    <div style={{ background: "#0D1220" }}>
       {/* Large logo watermark */}
       <div className="container pt-4 md:pt-6 pb-8">
         <motion.div
