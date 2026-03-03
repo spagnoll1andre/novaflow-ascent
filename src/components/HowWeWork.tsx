@@ -68,19 +68,19 @@ const HowWeWork = () => {
                 <AccordionPrimitive.Item value={`step-${i}`} className="border-0">
                   <div className="rounded-2xl overflow-hidden transition-all duration-200"
                 style={{
-                  background: "hsl(217, 83%, 60%)",
-                  boxShadow: "0 4px 20px -4px hsla(217,83%,50%,0.3), 0 0 0 0.5px hsla(217,83%,60%,0.2)"
+                  background: "linear-gradient(135deg, #0F162B 0%, #16234C 100%)",
+                  boxShadow: "0 4px 20px -4px hsla(226,46%,11%,0.3), 0 0 0 0.5px hsla(217,83%,60%,0.1)"
                 }}>
                     <AccordionPrimitive.Header className="flex">
                       <AccordionPrimitive.Trigger
                       className="flex flex-1 items-center justify-between px-6 py-3.5 hover:no-underline text-left font-semibold text-base transition-all [&[data-state=open]>svg]:rotate-45"
-                      style={{ color: "#FFFFFF" }}>
+                      style={{ color: "hsl(217, 83%, 60%)" }}>
                         <span className="text-base font-extralight">{s.title}</span>
-                        <Plus className="h-5 w-5 shrink-0 transition-transform duration-200" style={{ color: "rgba(255,255,255,0.8)" }} />
+                        <Plus className="h-5 w-5 shrink-0 transition-transform duration-200" style={{ color: "hsl(217, 83%, 60%)" }} />
                       </AccordionPrimitive.Trigger>
                     </AccordionPrimitive.Header>
                     <AccordionPrimitive.Content className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
-                      <div className="px-6 pb-4 leading-relaxed" style={{ color: "rgba(255,255,255,0.75)" }}>
+                      <div className="px-6 pb-4 leading-relaxed" style={{ color: "hsla(217, 83%, 60%, 0.7)" }}>
                         {s.desc}
                       </div>
                     </AccordionPrimitive.Content>
