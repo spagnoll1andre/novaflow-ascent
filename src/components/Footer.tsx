@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BarChart3, Users } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import logo from "@/assets/novaflow-logo.jpg";
 
 const cols = [
@@ -14,113 +14,122 @@ const clients = ["Tada", "Stemau", "Kosmail", "Fraglia"];
 
 const Footer = () => (
   <footer>
-    {/* Dark CTA section */}
-    <div className="relative overflow-hidden py-24 md:py-32" style={{ background: "linear-gradient(135deg, hsl(226 46% 11%), hsl(226 40% 18%))" }}>
-      {/* Subtle noise / vignette */}
-      <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at 70% 50%, hsla(217,83%,50%,0.06) 0%, transparent 60%)" }} />
+    {/* Dark CTA section — 95% width rounded panel */}
+    <div className="py-6 md:py-10" style={{ background: "#F6FBFF" }}>
+      <div className="relative mx-auto w-[95%] rounded-[32px] md:rounded-[40px] py-20 md:py-28 overflow-hidden"
+        style={{
+          background: "linear-gradient(180deg, #0F162B 0%, #16234C 100%)",
+          boxShadow: "0 24px 80px -12px hsla(226,46%,11%,0.35), 0 0 0 0.5px rgba(255,255,255,0.05)",
+        }}>
+        {/* Subtle noise / vignette */}
+        <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at 70% 50%, hsla(217,83%,50%,0.06) 0%, transparent 60%)" }} />
+        <div className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay"
+          style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")", backgroundRepeat: "repeat", backgroundSize: "128px 128px" }} />
+        <div className="absolute top-0 left-0 right-0 h-px pointer-events-none" style={{ background: "linear-gradient(90deg, transparent 10%, rgba(255,255,255,0.06) 50%, transparent 90%)" }} />
 
-      <div className="container relative z-10 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-        {/* Left */}
-        <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-          <span className="text-xs font-semibold uppercase tracking-[0.12em]" style={{ color: "hsl(217 83% 60%)" }}>Inizia oggi</span>
-          <h2 className="mt-4 text-3xl md:text-4xl font-bold text-white" style={{ letterSpacing: "-0.025em", lineHeight: "1.15" }}>
-            Pronto a semplificare la tua azienda?
-          </h2>
-          <p className="mt-5 text-white/60 leading-relaxed" style={{ maxWidth: "28rem" }}>
-            Scopri come NovaFlow può trasformare i tuoi processi in un unico gestionale intelligente. L'analisi iniziale è gratuita e senza impegno.
-          </p>
+        <div className="container relative z-10 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+          {/* Left */}
+          <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <span className="text-xs font-semibold uppercase tracking-[0.12em]" style={{ color: "hsl(217 83% 60%)" }}>Inizia oggi</span>
+            <h2 className="mt-4 text-3xl md:text-4xl font-bold" style={{ color: "#FFFFFF", letterSpacing: "-0.025em", lineHeight: "1.15" }}>
+              Pronto a semplificare la tua azienda?
+            </h2>
+            <p className="mt-5 leading-relaxed" style={{ color: "rgba(255,255,255,0.6)", maxWidth: "28rem" }}>
+              Scopri come NovaFlow può trasformare i tuoi processi in un unico gestionale intelligente. L'analisi iniziale è gratuita e senza impegno.
+            </p>
 
-          {/* Client chips */}
-          <div className="mt-6 flex flex-wrap items-center gap-2.5">
-            <span className="text-xs text-white/40">Già al fianco di:</span>
-            {clients.map((c) => (
-              <span key={c} className="px-3 py-1 rounded-full text-xs font-medium text-white/70 border border-white/15">{c}</span>
-            ))}
-          </div>
-
-          {/* CTAs */}
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Button
-              size="lg"
-              className="rounded-full px-8 transition-all duration-200 ease-out hover:-translate-y-[1px]"
-              onClick={() => document.querySelector("#contatti")?.scrollIntoView({ behavior: "smooth" })}
-              style={{
-                background: "linear-gradient(180deg, hsl(217 83% 62%), hsl(217 83% 50%))",
-                color: "#fff",
-                border: "1px solid hsl(217 83% 60% / 0.3)",
-                boxShadow: "0 4px 20px -4px hsl(217 83% 50% / 0.4), inset 0 1px 0 0 hsl(217 83% 75% / 0.4)",
-              }}
-            >
-              Richiedi un'analisi gratuita
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-            <Button
-              size="lg"
-              className="rounded-full px-8 transition-all duration-200 ease-out hover:-translate-y-[1px]"
-              onClick={() => document.querySelector("#contatti")?.scrollIntoView({ behavior: "smooth" })}
-              style={{
-                background: "rgba(255,255,255,0.95)",
-                color: "#0F162B",
-                border: "1px solid rgba(255,255,255,0.3)",
-                boxShadow: "0 2px 12px -2px rgba(0,0,0,0.2), inset 0 1px 0 0 rgba(255,255,255,1)",
-                fontWeight: 600,
-              }}
-            >
-              Prenota una demo
-            </Button>
-          </div>
-        </motion.div>
-
-        {/* Right — mini dashboard mockup */}
-        <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.15 }}>
-          <div className="rounded-[24px] overflow-hidden" style={{
-            background: "linear-gradient(135deg, hsl(226 46% 16%), hsl(226 46% 20%))",
-            border: "1px solid rgba(255,255,255,0.08)",
-            boxShadow: "0 20px 60px -12px rgba(0,0,0,0.5)",
-          }}>
-            {/* Title bar */}
-            <div className="flex items-center gap-2 px-5 py-3" style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
-              <div className="flex gap-1.5">
-                <div className="h-2.5 w-2.5 rounded-full" style={{ background: "hsl(347 77% 50% / 0.5)" }} />
-                <div className="h-2.5 w-2.5 rounded-full" style={{ background: "hsl(45 93% 58% / 0.5)" }} />
-                <div className="h-2.5 w-2.5 rounded-full" style={{ background: "hsl(142 71% 45% / 0.5)" }} />
-              </div>
-              <div className="ml-4 h-2.5 w-24 rounded-full" style={{ background: "rgba(255,255,255,0.08)" }} />
+            {/* Client chips */}
+            <div className="mt-6 flex flex-wrap items-center gap-2.5">
+              <span className="text-xs" style={{ color: "rgba(255,255,255,0.4)" }}>Già al fianco di:</span>
+              {clients.map((c) => (
+                <span key={c} className="px-3 py-1 rounded-full text-xs font-medium" style={{ color: "rgba(255,255,255,0.7)", border: "1px solid rgba(255,255,255,0.15)" }}>{c}</span>
+              ))}
             </div>
 
-            <div className="flex">
-              {/* Sidebar */}
-              <div className="w-16 p-3 space-y-3 hidden sm:block" style={{ borderRight: "1px solid rgba(255,255,255,0.06)" }}>
-                {[1, 2, 3, 4, 5].map((n) => (
-                  <div key={n} className="h-2 w-full rounded" style={{ background: "rgba(255,255,255,0.06)" }} />
-                ))}
+            {/* CTAs */}
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Button
+                size="lg"
+                className="rounded-full px-8 transition-all duration-200 ease-out hover:-translate-y-[1px]"
+                onClick={() => document.querySelector("#contatti")?.scrollIntoView({ behavior: "smooth" })}
+                style={{
+                  background: "linear-gradient(180deg, hsl(217 83% 62%), hsl(217 83% 50%))",
+                  color: "#fff",
+                  border: "1px solid hsl(217 83% 60% / 0.3)",
+                  boxShadow: "0 4px 20px -4px hsl(217 83% 50% / 0.4), inset 0 1px 0 0 hsl(217 83% 75% / 0.4)",
+                }}
+              >
+                Richiedi un'analisi gratuita
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+              <Button
+                size="lg"
+                className="rounded-full px-8 transition-all duration-200 ease-out hover:-translate-y-[1px]"
+                onClick={() => document.querySelector("#contatti")?.scrollIntoView({ behavior: "smooth" })}
+                style={{
+                  background: "rgba(255,255,255,0.95)",
+                  color: "#0F162B",
+                  border: "1px solid rgba(255,255,255,0.3)",
+                  boxShadow: "0 2px 12px -2px rgba(0,0,0,0.2), inset 0 1px 0 0 rgba(255,255,255,1)",
+                  fontWeight: 600,
+                }}
+              >
+                Prenota una demo
+              </Button>
+            </div>
+          </motion.div>
+
+          {/* Right — mini dashboard mockup */}
+          <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.15 }}>
+            <div className="rounded-[24px] overflow-hidden" style={{
+              background: "linear-gradient(135deg, hsl(226 46% 16%), hsl(226 46% 20%))",
+              border: "1px solid rgba(255,255,255,0.08)",
+              boxShadow: "0 20px 60px -12px rgba(0,0,0,0.5)",
+            }}>
+              {/* Title bar */}
+              <div className="flex items-center gap-2 px-5 py-3" style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+                <div className="flex gap-1.5">
+                  <div className="h-2.5 w-2.5 rounded-full" style={{ background: "hsl(347 77% 50% / 0.5)" }} />
+                  <div className="h-2.5 w-2.5 rounded-full" style={{ background: "hsl(45 93% 58% / 0.5)" }} />
+                  <div className="h-2.5 w-2.5 rounded-full" style={{ background: "hsl(142 71% 45% / 0.5)" }} />
+                </div>
+                <div className="ml-4 h-2.5 w-24 rounded-full" style={{ background: "rgba(255,255,255,0.08)" }} />
               </div>
 
-              {/* Content */}
-              <div className="flex-1 p-4 space-y-3">
-                <p className="text-xs font-semibold text-white/70">Dashboard</p>
-                <div className="grid grid-cols-2 gap-2.5">
-                  <div className="rounded-xl p-3" style={{ background: "rgba(255,255,255,0.95)", boxShadow: "0 2px 8px -2px rgba(0,0,0,0.1)" }}>
-                    <p className="text-[9px] text-muted-foreground">Efficienza</p>
-                    <p className="text-lg font-bold text-foreground">+24%</p>
-                  </div>
-                  <div className="rounded-xl p-3" style={{ background: "rgba(255,255,255,0.95)", boxShadow: "0 2px 8px -2px rgba(0,0,0,0.1)" }}>
-                    <p className="text-[9px] text-muted-foreground">Clienti</p>
-                    <p className="text-lg font-bold text-foreground">142</p>
-                  </div>
+              <div className="flex">
+                {/* Sidebar */}
+                <div className="w-16 p-3 space-y-3 hidden sm:block" style={{ borderRight: "1px solid rgba(255,255,255,0.06)" }}>
+                  {[1, 2, 3, 4, 5].map((n) => (
+                    <div key={n} className="h-2 w-full rounded" style={{ background: "rgba(255,255,255,0.06)" }} />
+                  ))}
                 </div>
-                <div className="rounded-xl p-3" style={{ background: "rgba(255,255,255,0.95)" }}>
-                  <p className="text-[9px] text-muted-foreground mb-2">Andamento mensile</p>
-                  <div className="h-16 flex items-end gap-1">
-                    {[40, 55, 45, 65, 50, 70, 60, 80, 68, 75, 85, 78].map((h, i) => (
-                      <div key={i} className="flex-1 rounded-t-sm" style={{ height: `${h}%`, background: "hsl(217 83% 50% / 0.2)" }} />
-                    ))}
+
+                {/* Content */}
+                <div className="flex-1 p-4 space-y-3">
+                  <p className="text-xs font-semibold" style={{ color: "rgba(255,255,255,0.7)" }}>Dashboard</p>
+                  <div className="grid grid-cols-2 gap-2.5">
+                    <div className="rounded-xl p-3" style={{ background: "rgba(255,255,255,0.95)", boxShadow: "0 2px 8px -2px rgba(0,0,0,0.1)" }}>
+                      <p className="text-[9px]" style={{ color: "#6B7280" }}>Efficienza</p>
+                      <p className="text-lg font-bold" style={{ color: "#0F162B" }}>+24%</p>
+                    </div>
+                    <div className="rounded-xl p-3" style={{ background: "rgba(255,255,255,0.95)", boxShadow: "0 2px 8px -2px rgba(0,0,0,0.1)" }}>
+                      <p className="text-[9px]" style={{ color: "#6B7280" }}>Clienti</p>
+                      <p className="text-lg font-bold" style={{ color: "#0F162B" }}>142</p>
+                    </div>
+                  </div>
+                  <div className="rounded-xl p-3" style={{ background: "rgba(255,255,255,0.95)" }}>
+                    <p className="text-[9px] mb-2" style={{ color: "#6B7280" }}>Andamento mensile</p>
+                    <div className="h-16 flex items-end gap-1">
+                      {[40, 55, 45, 65, 50, 70, 60, 80, 68, 75, 85, 78].map((h, i) => (
+                        <div key={i} className="flex-1 rounded-t-sm" style={{ height: `${h}%`, background: "hsl(217 83% 50% / 0.2)" }} />
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </div>
 

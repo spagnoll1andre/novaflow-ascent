@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 
 const logos = ["CASIO", "KPMG", "HYUNDAI", "HEINEKEN", "TOYOTA"];
 
 const PoweredByOdoo = () => (
-  <section id="powered-by-odoo" className="scroll-mt-24 relative overflow-hidden" style={{ background: "#F6FBFF" }}>
-    <div className="relative mx-4 md:mx-8 lg:mx-12 -mt-2 rounded-[32px] md:rounded-[40px] py-14 md:py-20 overflow-hidden"
+  <section id="powered-by-odoo" className="scroll-mt-24 relative overflow-hidden py-6 md:py-10" style={{ background: "#F6FBFF" }}>
+    <div className="relative mx-auto w-[95%] rounded-[32px] md:rounded-[40px] py-12 md:py-16 overflow-hidden"
       style={{
         background: "linear-gradient(180deg, #0F162B 0%, #16234C 100%)",
         boxShadow: "0 24px 80px -12px hsla(226,46%,11%,0.35), 0 0 0 0.5px rgba(255,255,255,0.05)",
@@ -20,23 +19,23 @@ const PoweredByOdoo = () => (
 
       <div className="container text-center relative z-10">
         <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
-          <span className="inline-block px-6 py-2.5 rounded-full text-sm font-semibold uppercase"
+          <span className="inline-block px-8 py-3 rounded-full text-sm font-semibold uppercase"
             style={{
-              color: "#E0E0E0",
-              background: "rgba(255,255,255,0.08)",
-              border: "1px solid rgba(255,255,255,0.12)",
-              boxShadow: "0 2px 12px -2px rgba(0,0,0,0.3), inset 0 1px 0 0 rgba(255,255,255,0.1)",
-              letterSpacing: "0.1em",
+              color: "#FFFFFF",
+              background: "rgba(255,255,255,0.12)",
+              border: "1px solid rgba(255,255,255,0.25)",
+              boxShadow: "0 4px 16px -2px rgba(0,0,0,0.4), inset 0 1px 0 0 rgba(255,255,255,0.2), inset 0 -1px 0 0 rgba(0,0,0,0.15)",
+              letterSpacing: "0.12em",
             }}>
             POWERED BY ODOO
           </span>
           <p className="mt-8 text-xl md:text-2xl font-bold max-w-3xl mx-auto leading-relaxed"
-            style={{ color: "#CECECE", letterSpacing: "-0.01em" }}>
+            style={{ color: "#FFFFFF", letterSpacing: "-0.01em" }}>
             Come partner Odoo, realizziamo soluzioni ERP di eccellenza, customizzate per le tue esigenze
           </p>
         </motion.div>
 
-        <div className="mt-12 flex flex-wrap justify-center items-center gap-12 md:gap-20">
+        <div className="mt-10 flex flex-wrap justify-center items-center gap-12 md:gap-20">
           {logos.map((name, i) => (
             <motion.span
               key={name}
@@ -45,15 +44,15 @@ const PoweredByOdoo = () => (
               viewport={{ once: true }}
               transition={{ delay: 0.1 + i * 0.06 }}
               className="text-xl md:text-2xl font-bold select-none transition-opacity duration-200 hover:opacity-60"
-              style={{ color: "rgba(206,206,206,0.35)", letterSpacing: "0.25em" }}
+              style={{ color: "rgba(255,255,255,0.35)", letterSpacing: "0.25em" }}
             >
               {name}
             </motion.span>
           ))}
         </div>
 
-        <p className="mt-12 text-sm md:text-base max-w-2xl mx-auto leading-relaxed"
-          style={{ color: "#6B7280", maxWidth: "38rem" }}>
+        <p className="mt-10 text-sm md:text-base max-w-2xl mx-auto leading-relaxed"
+          style={{ color: "rgba(255,255,255,0.55)", maxWidth: "38rem" }}>
           Offriamo la potenza e l'affidabilità di Odoo, il software scelto da oltre 12 milioni di utenti in tutto il mondo, adattato alla tua realtà
         </p>
       </div>
