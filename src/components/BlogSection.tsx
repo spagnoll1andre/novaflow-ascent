@@ -32,7 +32,7 @@ const BlogSection = () => (
   <section className="py-24 md:py-32 relative overflow-hidden" style={{ background: "#F6FBFF" }}>
     <div className="container relative z-10">
       <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
-        <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-semibold bg-foreground text-background">BLOG</span>
+        <span className="inline-block font-semibold tracking-wide uppercase text-primary/70 text-sm" style={{ letterSpacing: "0.08em" }}>BLOG</span>
         <h2 className="mt-5 text-3xl md:text-4xl font-bold text-foreground" style={{ letterSpacing: "-0.025em", lineHeight: "1.15" }}>
           Gli ultimi aggiornamenti
         </h2>
