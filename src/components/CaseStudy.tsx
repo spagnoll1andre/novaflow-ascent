@@ -14,7 +14,7 @@ const cardBase = {
 };
 
 const CaseStudy = () => (
-  <section id="case-study" className="scroll-mt-20 py-20 md:py-28 relative overflow-hidden" style={{ background: "#F6FBFF" }}>
+  <section id="case-study" className="scroll-mt-24 py-20 md:py-28 relative overflow-hidden" style={{ background: "#F6FBFF" }}>
     <div className="container relative z-10">
       <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
         <h2 className="text-3xl md:text-4xl font-bold text-foreground">Case Study</h2>

@@ -8,7 +8,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="hero" className="scroll-mt-20 pt-28 pb-20 md:pt-36 md:pb-28 relative overflow-hidden"
+    <section id="hero" className="scroll-mt-24 pt-28 pb-20 md:pt-36 md:pb-28 relative overflow-hidden"
       style={{ background: "#F6FBFF" }}>
       {/* Radial halo */}
       <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[900px] h-[700px] rounded-full pointer-events-none"
