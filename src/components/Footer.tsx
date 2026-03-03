@@ -10,7 +10,7 @@ const cols = [
   { title: "Legale", links: ["Privacy Policy", "Termini di Servizio", "Cookie Policy"] },
 ];
 
-const clients = ["Tada", "Stemau", "Kosmail", "Fraglia"];
+const clients = ["Tada", "Stemau", "Kosmail", "FVR"];
 
 const Footer = () => (
   <footer>
