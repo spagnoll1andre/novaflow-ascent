@@ -30,7 +30,7 @@ const Footer = () =>
         <div className="container relative z-10 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Left */}
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <span className="text-xs font-semibold uppercase tracking-[0.12em]" style={{ color: "hsl(217 83% 60%)" }}>Inizia oggi</span>
+            <span className="font-semibold uppercase tracking-[0.12em] text-sm" style={{ color: "hsl(217 83% 60%)" }}>Inizia oggi</span>
             <h2 className="mt-4 text-3xl md:text-4xl font-medium" style={{ color: "#FFFFFF", letterSpacing: "-0.025em", lineHeight: "1.15" }}>
               Pronto a semplificare la tua azienda?
             </h2>
