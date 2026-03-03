@@ -80,7 +80,7 @@ const HowWeWork = () => {
                       </AccordionPrimitive.Trigger>
                     </AccordionPrimitive.Header>
                     <AccordionPrimitive.Content className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
-                      <div className="px-6 pb-4 leading-relaxed text-primary-foreground" style={{ color: "hsla(217, 83%, 60%, 0.7)" }}>
+                      <div className="px-6 pb-4 leading-relaxed text-primary-foreground" style={{ color: "#FFFFFF" }}>
                         {s.desc}
                       </div>
                     </AccordionPrimitive.Content>
