@@ -6,6 +6,7 @@ import logoHeineken from "@/assets/logo-heineken.png";
 import logoMitsubishi from "@/assets/logo-mitsubishi.png";
 import logoShell from "@/assets/logo-shell.png";
 import logoIbm from "@/assets/logo-ibm.png";
+import logoMastercard from "@/assets/logo-mastercard.png";
 import logoMizuno from "@/assets/logo-mizuno.png";
 import logoAeon from "@/assets/logo-aeon.png";
 import logoMegamarket from "@/assets/logo-megamarket.png";
@@ -21,6 +22,7 @@ const logos = [
   { name: "Mizuno", src: logoMizuno },
   { name: "Aeon", src: logoAeon },
   { name: "Mega Market", src: logoMegamarket },
+  { name: "Mastercard", src: logoMastercard },
 ];
 
 // Duplicate for seamless loop
