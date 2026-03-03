@@ -69,7 +69,7 @@ const Solutions = () => (
                   style={{ background: "rgba(255,255,255,0.1)", boxShadow: "inset 0 1px 0 0 rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.15)" }}>
                   <c.icon className="h-5 w-5" style={{ color: "#FFFFFF" }} />
                 </div>
-                <span className="text-[9px] font-medium uppercase px-2.5 py-1 rounded-full"
+                <span className="text-[11px] font-medium uppercase px-3 py-1.5 rounded-full"
                   style={{
                     color: "rgba(255,255,255,0.85)",
                     background: "rgba(255,255,255,0.08)",
@@ -81,7 +81,7 @@ const Solutions = () => (
               </div>
 
               {/* Title */}
-              <h3 className="text-lg font-medium mb-2" style={{ color: "#FFFFFF", letterSpacing: "-0.015em" }}>{c.title}</h3>
+              <h3 className="text-xl font-medium mb-2" style={{ color: "#FFFFFF", letterSpacing: "-0.015em" }}>{c.title}</h3>
 
               {/* Description */}
               <p className="text-sm leading-relaxed mb-5" style={{ color: "rgba(255,255,255,0.85)" }}>{c.desc}</p>
@@ -99,7 +99,7 @@ const Solutions = () => (
               {/* Text link CTA */}
               <button
                 onClick={() => document.querySelector("#contatti")?.scrollIntoView({ behavior: "smooth" })}
-                className="inline-flex items-center gap-1.5 text-sm font-medium transition-colors duration-200"
+                className="inline-flex items-center gap-1.5 text-base font-medium transition-colors duration-200"
                 style={{ color: "#FFFFFF" }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.7)")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "#FFFFFF")}
