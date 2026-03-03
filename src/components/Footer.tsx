@@ -6,8 +6,7 @@ import darkLogo from "@/assets/novaflow-logo-dark.png";
 const cols = [
 { title: "Soluzioni", links: ["ERP Odoo", "Digital Solutions", "Infrastruttura", "Automazioni"] },
 { title: "Verticali", links: ["Produzione", "Distrubuzione", "IoT", "E-commerce"] },
-{ title: "Azienda", links: ["Chi siamo", "Case Study", "Blog", "Lavora con noi"] },
-{ title: "Legale", links: ["Privacy Policy", "Termini di Servizio", "Cookie Policy"] }];
+{ title: "Azienda", links: ["Chi siamo", "Case Study", "Blog", "Lavora con noi"] }];
 
 
 const clients = ["Tada", "Stemau", "Kosmail", "FVR"];
@@ -123,9 +122,9 @@ const Footer = () =>
     </div>
 
     {/* Footer — dark continuous section */}
-    <div style={{ background: "linear-gradient(180deg, #0D1220 0%, #0A0E1A 100%)" }}>
+    <div style={{ background: "linear-gradient(180deg, transparent 0%, #0D1220 30%, #0A0E1A 100%)" }}>
       {/* Large logo watermark */}
-      <div className="container pt-16 md:pt-20 pb-8">
+      <div className="container pt-4 md:pt-6 pb-8">
         <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -135,8 +134,7 @@ const Footer = () =>
           <img
           src={darkLogo}
           alt="NovaFlow"
-          className="w-full max-w-4xl opacity-40"
-          style={{ filter: "brightness(0.8)" }} />
+          className="w-full max-w-5xl opacity-50" />
         
         </motion.div>
       </div>
@@ -148,7 +146,7 @@ const Footer = () =>
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-40px" }}
         transition={{ duration: 0.45, ease: [0.4, 0, 0.2, 1] }}
-        className="grid grid-cols-2 md:grid-cols-5 gap-10 md:gap-8">
+        className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
         
           {/* Brand col */}
           <div className="col-span-2 md:col-span-1">
