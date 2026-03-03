@@ -81,7 +81,7 @@ const Solutions = () => (
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-medium mb-2" style={{ color: "#FFFFFF", letterSpacing: "-0.015em" }}>{c.title}</h3>
+              <h3 className="text-2xl font-medium mb-2" style={{ color: "#FFFFFF", letterSpacing: "-0.015em" }}>{c.title}</h3>
 
               {/* Description */}
               <p className="text-sm leading-relaxed mb-5" style={{ color: "rgba(255,255,255,0.85)" }}>{c.desc}</p>
