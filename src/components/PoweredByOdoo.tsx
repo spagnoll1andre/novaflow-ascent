@@ -1,6 +1,20 @@
 import { motion } from "framer-motion";
+import logoCasio from "@/assets/logo-casio.png";
+import logoKpmg from "@/assets/logo-kpmg.png";
+import logoHyundai from "@/assets/logo-hyundai.png";
+import logoHeineken from "@/assets/logo-heineken.png";
+import logoToyota from "@/assets/logo-toyota.png";
 
-const logos = ["CASIO", "KPMG", "HYUNDAI", "HEINEKEN", "TOYOTA"];
+const logos = [
+  { name: "Casio", src: logoCasio },
+  { name: "KPMG", src: logoKpmg },
+  { name: "Hyundai", src: logoHyundai },
+  { name: "Heineken", src: logoHeineken },
+  { name: "Toyota", src: logoToyota },
+];
+
+// Duplicate for seamless loop
+const doubled = [...logos, ...logos];
 
 const PoweredByOdoo = () => (
   <section id="powered-by-odoo" className="scroll-mt-24 relative overflow-hidden py-6 md:py-10" style={{ background: "#F6FBFF" }}>
@@ -29,30 +43,40 @@ const PoweredByOdoo = () => (
             }}>
             POWERED BY ODOO
           </span>
-          <p className="mt-8 text-xl md:text-2xl font-bold max-w-3xl mx-auto leading-relaxed"
+          <p className="mt-8 text-xl md:text-2xl font-medium max-w-3xl mx-auto leading-relaxed"
             style={{ color: "#FFFFFF", letterSpacing: "-0.01em" }}>
             Come partner Odoo, realizziamo soluzioni ERP di eccellenza, customizzate per le tue esigenze
           </p>
         </motion.div>
 
-        <div className="mt-10 flex flex-wrap justify-center items-center gap-12 md:gap-20">
-          {logos.map((name, i) => (
-            <motion.span
-              key={name}
-              initial={{ opacity: 0, y: 8 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 + i * 0.06 }}
-              className="text-xl md:text-2xl font-bold select-none transition-opacity duration-200 hover:opacity-60"
-              style={{ color: "rgba(255,255,255,0.35)", letterSpacing: "0.25em" }}
-            >
-              {name}
-            </motion.span>
-          ))}
+        {/* Infinite scrolling logos */}
+        <div className="mt-10 overflow-hidden relative">
+          {/* Fade edges */}
+          <div className="absolute left-0 top-0 bottom-0 w-16 z-10 pointer-events-none"
+            style={{ background: "linear-gradient(90deg, #0F162B 0%, transparent 100%)" }} />
+          <div className="absolute right-0 top-0 bottom-0 w-16 z-10 pointer-events-none"
+            style={{ background: "linear-gradient(270deg, #16234C 0%, transparent 100%)" }} />
+
+          <motion.div
+            className="flex items-center gap-16"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            style={{ width: "fit-content" }}
+          >
+            {doubled.map((logo, i) => (
+              <img
+                key={`${logo.name}-${i}`}
+                src={logo.src}
+                alt={logo.name}
+                className="h-10 md:h-12 w-auto object-contain shrink-0"
+                style={{ opacity: 0.5, filter: "brightness(1.5) grayscale(0.2)" }}
+              />
+            ))}
+          </motion.div>
         </div>
 
         <p className="mt-10 text-sm md:text-base max-w-2xl mx-auto leading-relaxed"
-          style={{ color: "rgba(255,255,255,0.55)", maxWidth: "38rem" }}>
+          style={{ color: "#FFFFFF", maxWidth: "38rem" }}>
           Offriamo la potenza e l'affidabilità di Odoo, il software scelto da oltre 12 milioni di utenti in tutto il mondo, adattato alla tua realtà
         </p>
       </div>
