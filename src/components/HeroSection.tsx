@@ -44,7 +44,7 @@ const HeroSection = () => {
             </span>
           </motion.div>
 
-          <h1 className="mt-6 text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-foreground leading-[1.08]"
+          <h1 className="mt-6 text-[2.65rem] md:text-[3.3rem] lg:text-[3.7rem] font-extrabold text-foreground leading-[1.08]"
             style={{ letterSpacing: "-0.025em" }}>
             Digitalizza la tua azienda con{" "}
             <span className="text-primary">NovaFlow</span>
