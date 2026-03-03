@@ -148,13 +148,13 @@ const Footer = () =>
         
           <div className="col-span-2 md:col-span-1">
             <img src={logo} alt="NovaFlow" className="h-8 w-auto mb-4" />
-            <p className="text-sm text-muted-foreground leading-relaxed" style={{ maxWidth: "14rem" }}>
+            <p className="text-muted-foreground leading-relaxed text-base font-thin" style={{ maxWidth: "14rem" }}>
               Digitalizzazione su misura per PMI italiane.
             </p>
           </div>
           {cols.map((col) =>
         <div key={col.title}>
-              <h4 className="text-[11px] font-semibold uppercase text-foreground/50 mb-4" style={{ letterSpacing: "0.1em" }}>{col.title}</h4>
+              <h4 className="uppercase text-foreground/50 mb-4 text-sm font-normal" style={{ letterSpacing: "0.1em" }}>{col.title}</h4>
               <ul className="space-y-2.5">
                 {col.links.map((link) =>
             <li key={link}>
