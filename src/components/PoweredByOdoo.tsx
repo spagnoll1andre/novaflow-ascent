@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const logos = ["CASIO", "KPMG", "HYUNDAI", "HEINEKEN", "TOYOTA"];
 
 const PoweredByOdoo = () => (
-  <section id="powered-by-odoo" className="scroll-mt-20 relative overflow-hidden" style={{ background: "#F6FBFF" }}>
+  <section id="powered-by-odoo" className="scroll-mt-24 relative overflow-hidden" style={{ background: "#F6FBFF" }}>
     {/* Dark panel with mega-radius, overlap previous section */}
     <div className="relative mx-4 md:mx-8 lg:mx-12 -mt-2 rounded-[32px] md:rounded-[40px] py-20 md:py-28 overflow-hidden"
       style={{
