@@ -8,7 +8,7 @@ const cols = [
 ];
 
 const Footer = () => (
-  <footer className="py-16 border-t border-border bg-background">
+  <footer className="py-16 border-t border-border" style={{ background: "#F6FBFF" }}>
     <div className="container">
       <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
         <div className="col-span-2 md:col-span-1">
