@@ -4,25 +4,25 @@ import { ArrowRight, Instagram } from "lucide-react";
 import darkLogo from "@/assets/novaflow-logo-dark.png";
 
 const cols = [
-  { title: "Soluzioni", links: ["ERP Odoo", "Digital Solutions", "Infrastruttura", "Automazioni"] },
-  { title: "Verticali", links: ["Produzione", "Distrubuzione", "IoT", "E-commerce"] },
-  { title: "Azienda", links: ["Chi siamo", "Case Study", "Blog", "Lavora con noi"] },
-  { title: "Legale", links: ["Privacy Policy", "Termini di Servizio", "Cookie Policy"] },
-];
+{ title: "Soluzioni", links: ["ERP Odoo", "Digital Solutions", "Infrastruttura", "Automazioni"] },
+{ title: "Verticali", links: ["Produzione", "Distrubuzione", "IoT", "E-commerce"] },
+{ title: "Azienda", links: ["Chi siamo", "Case Study", "Blog", "Lavora con noi"] },
+{ title: "Legale", links: ["Privacy Policy", "Termini di Servizio", "Cookie Policy"] }];
+
 
 const clients = ["Tada", "Stemau", "Kosmail", "FVR"];
 
-const Footer = () => (
-  <footer>
+const Footer = () =>
+<footer>
     {/* Dark CTA section — 95% width rounded panel */}
     <div className="py-3 md:py-5" style={{ background: "#F6FBFF" }}>
       <div
-        className="relative mx-auto w-[95%] rounded-[32px] md:rounded-[40px] py-10 md:py-14 overflow-hidden"
-        style={{
-          background: "linear-gradient(180deg, #0F162B 0%, #16234C 100%)",
-          boxShadow: "0 24px 80px -12px hsla(226,46%,11%,0.35), 0 0 0 0.5px rgba(255,255,255,0.05)",
-        }}
-      >
+      className="relative mx-auto w-[95%] rounded-[32px] md:rounded-[40px] py-10 md:py-14 overflow-hidden"
+      style={{
+        background: "linear-gradient(180deg, #0F162B 0%, #16234C 100%)",
+        boxShadow: "0 24px 80px -12px hsla(226,46%,11%,0.35), 0 0 0 0.5px rgba(255,255,255,0.05)"
+      }}>
+      
         <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at 70% 50%, hsla(217,83%,50%,0.06) 0%, transparent 60%)" }} />
         <div className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")", backgroundRepeat: "repeat", backgroundSize: "128px 128px" }} />
         <div className="absolute top-0 left-0 right-0 h-px pointer-events-none" style={{ background: "linear-gradient(90deg, transparent 10%, rgba(255,255,255,0.06) 50%, transparent 90%)" }} />
@@ -31,7 +31,7 @@ const Footer = () => (
           {/* Left */}
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <span className="font-semibold uppercase tracking-[0.12em] text-sm" style={{ color: "hsl(217 83% 60%)" }}>Inizia oggi</span>
-            <h2 className="mt-4 text-3xl md:text-4xl font-medium" style={{ color: "#FFFFFF", letterSpacing: "-0.025em", lineHeight: "1.15" }}>
+            <h2 className="mt-4 text-3xl md:text-4xl font-bold" style={{ color: "#FFFFFF", letterSpacing: "-0.025em", lineHeight: "1.15" }}>
               Pronto a semplificare la tua azienda?
             </h2>
             <p className="mt-5 leading-relaxed text-sm" style={{ color: "rgba(255,255,255,0.6)", maxWidth: "28rem" }}>
@@ -40,38 +40,38 @@ const Footer = () => (
 
             <div className="mt-6 flex flex-wrap items-center gap-2.5">
               <span className="text-sm" style={{ color: "rgba(255,255,255,0.4)" }}>Già al fianco di:</span>
-              {clients.map((c) => (
-                <span key={c} className="px-3 py-1 rounded-full font-medium text-sm" style={{ color: "rgba(255,255,255,0.7)", border: "1px solid rgba(255,255,255,0.15)" }}>{c}</span>
-              ))}
+              {clients.map((c) =>
+            <span key={c} className="px-3 py-1 rounded-full font-medium text-sm" style={{ color: "rgba(255,255,255,0.7)", border: "1px solid rgba(255,255,255,0.15)" }}>{c}</span>
+            )}
             </div>
 
             <div className="mt-8 flex flex-wrap gap-4">
               <Button
-                size="lg"
-                className="rounded-full px-8 transition-all duration-200 ease-out hover:-translate-y-[1px]"
-                onClick={() => document.querySelector("#contatti")?.scrollIntoView({ behavior: "smooth" })}
-                style={{
-                  background: "linear-gradient(180deg, hsl(217 83% 62%), hsl(217 83% 50%))",
-                  color: "#fff",
-                  border: "1px solid hsl(217 83% 60% / 0.3)",
-                  boxShadow: "0 4px 20px -4px hsl(217 83% 50% / 0.4), inset 0 1px 0 0 hsl(217 83% 75% / 0.4)",
-                }}
-              >
+              size="lg"
+              className="rounded-full px-8 transition-all duration-200 ease-out hover:-translate-y-[1px]"
+              onClick={() => document.querySelector("#contatti")?.scrollIntoView({ behavior: "smooth" })}
+              style={{
+                background: "linear-gradient(180deg, hsl(217 83% 62%), hsl(217 83% 50%))",
+                color: "#fff",
+                border: "1px solid hsl(217 83% 60% / 0.3)",
+                boxShadow: "0 4px 20px -4px hsl(217 83% 50% / 0.4), inset 0 1px 0 0 hsl(217 83% 75% / 0.4)"
+              }}>
+              
                 Richiedi un'analisi gratuita
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               <Button
-                size="lg"
-                className="rounded-full px-8 transition-all duration-200 ease-out hover:-translate-y-[1px]"
-                onClick={() => document.querySelector("#contatti")?.scrollIntoView({ behavior: "smooth" })}
-                style={{
-                  background: "rgba(255,255,255,0.95)",
-                  color: "#0F162B",
-                  border: "1px solid rgba(255,255,255,0.3)",
-                  boxShadow: "0 2px 12px -2px rgba(0,0,0,0.2), inset 0 1px 0 0 rgba(255,255,255,1)",
-                  fontWeight: 600,
-                }}
-              >
+              size="lg"
+              className="rounded-full px-8 transition-all duration-200 ease-out hover:-translate-y-[1px]"
+              onClick={() => document.querySelector("#contatti")?.scrollIntoView({ behavior: "smooth" })}
+              style={{
+                background: "rgba(255,255,255,0.95)",
+                color: "#0F162B",
+                border: "1px solid rgba(255,255,255,0.3)",
+                boxShadow: "0 2px 12px -2px rgba(0,0,0,0.2), inset 0 1px 0 0 rgba(255,255,255,1)",
+                fontWeight: 600
+              }}>
+              
                 Prenota una demo
               </Button>
             </div>
@@ -90,9 +90,9 @@ const Footer = () => (
               </div>
               <div className="flex">
                 <div className="w-16 p-3 space-y-3 hidden sm:block" style={{ borderRight: "1px solid rgba(255,255,255,0.06)" }}>
-                  {[1, 2, 3, 4, 5].map((n) => (
-                    <div key={n} className="h-2 w-full rounded" style={{ background: "rgba(255,255,255,0.06)" }} />
-                  ))}
+                  {[1, 2, 3, 4, 5].map((n) =>
+                <div key={n} className="h-2 w-full rounded" style={{ background: "rgba(255,255,255,0.06)" }} />
+                )}
                 </div>
                 <div className="flex-1 p-4 space-y-3">
                   <p className="text-xs font-semibold" style={{ color: "rgba(255,255,255,0.7)" }}>Dashboard</p>
@@ -109,9 +109,9 @@ const Footer = () => (
                   <div className="rounded-xl p-3" style={{ background: "rgba(255,255,255,0.95)" }}>
                     <p className="text-[9px] mb-2" style={{ color: "#6B7280" }}>Andamento mensile</p>
                     <div className="h-16 flex items-end gap-1">
-                      {[40, 55, 45, 65, 50, 70, 60, 80, 68, 75, 85, 78].map((h, i) => (
-                        <div key={i} className="flex-1 rounded-t-sm" style={{ height: `${h}%`, background: "hsl(217 83% 50% / 0.2)" }} />
-                      ))}
+                      {[40, 55, 45, 65, 50, 70, 60, 80, 68, 75, 85, 78].map((h, i) =>
+                    <div key={i} className="flex-1 rounded-t-sm" style={{ height: `${h}%`, background: "hsl(217 83% 50% / 0.2)" }} />
+                    )}
                     </div>
                   </div>
                 </div>
@@ -127,80 +127,80 @@ const Footer = () => (
       {/* Large logo watermark */}
       <div className="container pt-16 md:pt-20 pb-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="flex justify-center"
-        >
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="flex justify-center">
+        
           <img
-            src={darkLogo}
-            alt="NovaFlow"
-            className="w-full max-w-4xl opacity-40"
-            style={{ filter: "brightness(0.8)" }}
-          />
+          src={darkLogo}
+          alt="NovaFlow"
+          className="w-full max-w-4xl opacity-40"
+          style={{ filter: "brightness(0.8)" }} />
+        
         </motion.div>
       </div>
 
       {/* Footer content */}
       <div className="container pb-10 md:pb-14">
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 0.45, ease: [0.4, 0, 0.2, 1] }}
-          className="grid grid-cols-2 md:grid-cols-5 gap-10 md:gap-8"
-        >
+        initial={{ opacity: 0, y: 12 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-40px" }}
+        transition={{ duration: 0.45, ease: [0.4, 0, 0.2, 1] }}
+        className="grid grid-cols-2 md:grid-cols-5 gap-10 md:gap-8">
+        
           {/* Brand col */}
           <div className="col-span-2 md:col-span-1">
-            <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.5)", maxWidth: "14rem" }}>
+            <p className="text-sm leading-relaxed text-primary-foreground" style={{ color: "rgba(255,255,255,0.5)", maxWidth: "14rem" }}>
               The Next-Generation<br />Business Platform
             </p>
             {/* Social icons */}
             <div className="mt-5 flex items-center gap-3">
               {[
-                { icon: <Instagram className="h-4 w-4" />, label: "Instagram" },
-                { icon: <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>, label: "X" },
-                { icon: <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61.01 3.91.04.6.02 1.19.07 1.77.17.56.1 1.09.27 1.57.54.48.27.89.62 1.24 1.03.35.41.62.88.8 1.39.18.51.29 1.04.34 1.58.1 1.13.14 2.26.14 3.4v4.66c0 1.14-.04 2.27-.14 3.4-.05.54-.16 1.07-.34 1.58-.18.51-.45.98-.8 1.39-.35.41-.76.76-1.24 1.03-.48.27-1.01.44-1.57.54-.58.1-1.17.15-1.77.17-1.3.03-2.6.05-3.91.04-1.31.01-2.61-.01-3.91-.04-.6-.02-1.19-.07-1.77-.17-.56-.1-1.09-.27-1.57-.54-.48-.27-.89-.62-1.24-1.03-.35-.41-.62-.88-.8-1.39-.18-.51-.29-1.04-.34-1.58C.14 16.93.1 15.8.1 14.66V9.99c0-1.14.04-2.27.14-3.4.05-.54.16-1.07.34-1.58.18-.51.45-.98.8-1.39.35-.41.76-.76 1.24-1.03.48-.27 1.01-.44 1.57-.54.58-.1 1.17-.15 1.77-.17C7.315.03 8.615.01 9.925.02h2.6zm-2.34 5.57v6.93l5.92-3.47-5.92-3.46z" /></svg>, label: "TikTok" },
-              ].map((s) => (
-                <a
-                  key={s.label}
-                  href="#"
-                  aria-label={s.label}
-                  className="flex items-center justify-center h-9 w-9 rounded-full border transition-colors duration-200"
-                  style={{ borderColor: "rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.7)" }}
-                >
+            { icon: <Instagram className="h-4 w-4" />, label: "Instagram" },
+            { icon: <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>, label: "X" },
+            { icon: <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61.01 3.91.04.6.02 1.19.07 1.77.17.56.1 1.09.27 1.57.54.48.27.89.62 1.24 1.03.35.41.62.88.8 1.39.18.51.29 1.04.34 1.58.1 1.13.14 2.26.14 3.4v4.66c0 1.14-.04 2.27-.14 3.4-.05.54-.16 1.07-.34 1.58-.18.51-.45.98-.8 1.39-.35.41-.76.76-1.24 1.03-.48.27-1.01.44-1.57.54-.58.1-1.17.15-1.77.17-1.3.03-2.6.05-3.91.04-1.31.01-2.61-.01-3.91-.04-.6-.02-1.19-.07-1.77-.17-.56-.1-1.09-.27-1.57-.54-.48-.27-.89-.62-1.24-1.03-.35-.41-.62-.88-.8-1.39-.18-.51-.29-1.04-.34-1.58C.14 16.93.1 15.8.1 14.66V9.99c0-1.14.04-2.27.14-3.4.05-.54.16-1.07.34-1.58.18-.51.45-.98.8-1.39.35-.41.76-.76 1.24-1.03.48-.27 1.01-.44 1.57-.54.58-.1 1.17-.15 1.77-.17C7.315.03 8.615.01 9.925.02h2.6zm-2.34 5.57v6.93l5.92-3.47-5.92-3.46z" /></svg>, label: "TikTok" }].
+            map((s) =>
+            <a
+              key={s.label}
+              href="#"
+              aria-label={s.label}
+              className="flex items-center justify-center h-9 w-9 rounded-full border transition-colors duration-200"
+              style={{ borderColor: "rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.7)" }}>
+              
                   {s.icon}
                 </a>
-              ))}
+            )}
             </div>
           </div>
 
           {/* Link columns */}
-          {cols.map((col) => (
-            <div key={col.title}>
+          {cols.map((col) =>
+        <div key={col.title}>
               <h4
-                className="uppercase mb-4 text-sm font-semibold"
-                style={{ color: "rgba(255,255,255,0.9)", letterSpacing: "0.1em" }}
-              >
+            className="uppercase mb-4 text-sm font-semibold"
+            style={{ color: "rgba(255,255,255,0.9)", letterSpacing: "0.1em" }}>
+            
                 {col.title}
               </h4>
               <ul className="space-y-2.5">
-                {col.links.map((link) => (
-                  <li key={link}>
+                {col.links.map((link) =>
+            <li key={link} className="text-primary-foreground">
                     <a
-                      href="#"
-                      className="text-sm transition-colors duration-200 ease-out hover:underline"
-                      style={{ color: "rgba(255,255,255,0.5)" }}
-                      onMouseEnter={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.85)")}
-                      onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.5)")}
-                    >
+                href="#"
+                className="text-sm transition-colors duration-200 ease-out hover:underline"
+                style={{ color: "rgba(255,255,255,0.5)" }}
+                onMouseEnter={(e) => e.currentTarget.style.color = "rgba(255,255,255,0.85)"}
+                onMouseLeave={(e) => e.currentTarget.style.color = "rgba(255,255,255,0.5)"}>
+                
                       {link}
                     </a>
                   </li>
-                ))}
+            )}
               </ul>
             </div>
-          ))}
+        )}
         </motion.div>
       </div>
 
@@ -212,23 +212,23 @@ const Footer = () => (
             © {new Date().getFullYear()} – NovaFlow
           </p>
           <div className="flex items-center gap-6">
-            {["Privacy Policy", "Cookies", "Terms & Conditions"].map((t) => (
-              <a
-                key={t}
-                href="#"
-                className="text-xs transition-colors duration-200"
-                style={{ color: "rgba(255,255,255,0.35)" }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.7)")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.35)")}
-              >
+            {["Privacy Policy", "Cookies", "Terms & Conditions"].map((t) =>
+          <a
+            key={t}
+            href="#"
+            className="text-xs transition-colors duration-200"
+            style={{ color: "rgba(255,255,255,0.35)" }}
+            onMouseEnter={(e) => e.currentTarget.style.color = "rgba(255,255,255,0.7)"}
+            onMouseLeave={(e) => e.currentTarget.style.color = "rgba(255,255,255,0.35)"}>
+            
                 {t}
               </a>
-            ))}
+          )}
           </div>
         </div>
       </div>
     </div>
-  </footer>
-);
+  </footer>;
+
 
 export default Footer;

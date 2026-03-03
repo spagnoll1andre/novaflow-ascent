@@ -33,7 +33,7 @@ const FAQSection = () =>
         }}>
             FAQ
           </span>
-          <h2 className="mt-8 text-3xl md:text-4xl font-medium" style={{ color: "#FFFFFF", letterSpacing: "-0.025em", lineHeight: "1.15" }}>
+          <h2 className="mt-8 text-3xl md:text-4xl font-bold" style={{ color: "#FFFFFF", letterSpacing: "-0.025em", lineHeight: "1.15" }}>
             Domande Frequenti
           </h2>
           <p className="mt-5 text-base leading-relaxed mx-auto font-extralight text-primary-foreground" style={{ color: "rgba(255,255,255,0.55)", maxWidth: "30rem" }}>
