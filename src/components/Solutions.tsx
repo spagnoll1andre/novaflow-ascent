@@ -24,74 +24,92 @@ const cards = [
   },
 ];
 
-const CARD = {
-  background: "rgba(255,255,255,0.7)",
-  boxShadow: "0 8px 32px -8px hsla(226,46%,11%,0.08), 0 1px 2px 0 hsla(226,46%,11%,0.02), inset 0 1px 0 0 rgba(255,255,255,0.9)",
-  border: "1px solid rgba(218,225,240,0.45)",
+const CARD_DARK = {
+  background: "rgba(255,255,255,0.06)",
+  boxShadow: "0 8px 32px -8px rgba(0,0,0,0.3), inset 0 1px 0 0 rgba(255,255,255,0.08)",
+  border: "1px solid rgba(255,255,255,0.1)",
 };
 
 const Solutions = () => (
-  <section id="sviluppo-erp" className="scroll-mt-24 py-24 md:py-32 relative overflow-hidden" style={{ background: "#F6FBFF" }}>
-    <div className="absolute top-[-10%] left-[35%] w-[700px] h-[500px] rounded-full pointer-events-none"
-      style={{ background: "radial-gradient(ellipse at center, hsla(217,83%,50%,0.04) 0%, transparent 70%)" }} />
-    <div className="absolute bottom-[-5%] right-[25%] w-[500px] h-[400px] rounded-full pointer-events-none"
-      style={{ background: "radial-gradient(ellipse at center, hsla(230,60%,55%,0.03) 0%, transparent 70%)" }} />
+  <section id="sviluppo-erp" className="scroll-mt-24 relative overflow-hidden py-3 md:py-5" style={{ background: "#F6FBFF" }}>
+    <div className="relative mx-auto w-[95%] rounded-[32px] md:rounded-[40px] py-20 md:py-28 overflow-hidden"
+      style={{
+        background: "linear-gradient(180deg, #0F162B 0%, #16234C 100%)",
+        boxShadow: "0 24px 80px -12px hsla(226,46%,11%,0.35), 0 0 0 0.5px rgba(255,255,255,0.05)",
+      }}>
+      {/* Ambient overlays */}
+      <div className="absolute inset-0 pointer-events-none"
+        style={{ background: "radial-gradient(ellipse 60% 50% at 50% 30%, hsla(217,70%,45%,0.12) 0%, transparent 70%)" }} />
+      <div className="absolute inset-0 pointer-events-none"
+        style={{ background: "radial-gradient(ellipse 80% 70% at 50% 50%, transparent 50%, rgba(10,14,28,0.5) 100%)" }} />
+      <div className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay"
+        style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")", backgroundRepeat: "repeat", backgroundSize: "128px 128px" }} />
+      <div className="absolute top-0 left-0 right-0 h-px pointer-events-none" style={{ background: "linear-gradient(90deg, transparent 10%, rgba(255,255,255,0.06) 50%, transparent 90%)" }} />
 
-    <div className="container relative z-10">
-      <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ letterSpacing: "-0.025em", lineHeight: "1.15" }}>Le Nostre Soluzioni</h2>
-        <p className="mt-4 text-muted-foreground max-w-xl mx-auto" style={{ maxWidth: "32rem" }}>Tutto ciò che serve per digitalizzare la tua azienda, in un unico partner.</p>
-      </motion.div>
+      <div className="container relative z-10">
+        <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-bold" style={{ color: "#FFFFFF", letterSpacing: "-0.025em", lineHeight: "1.15" }}>Le Nostre Soluzioni</h2>
+          <p className="mt-4 max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.6)", maxWidth: "32rem" }}>Tutto ciò che serve per digitalizzare la tua azienda, in un unico partner.</p>
+        </motion.div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
-        {cards.map((c, i) => (
-          <motion.div
-            key={c.title}
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.08 }}
-            className="group rounded-[24px] p-7 flex flex-col transition-all duration-200 ease-out hover:-translate-y-[2px] hover:shadow-[0_12px_40px_-8px_hsla(226,46%,11%,0.13)]"
-            style={CARD}
-          >
-            {/* Header: icon left, badge right */}
-            <div className="flex items-start justify-between mb-5">
-              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center"
-                style={{ boxShadow: "inset 0 1px 0 0 rgba(255,255,255,0.6)" }}>
-                <c.icon className="h-5 w-5 text-primary" />
-              </div>
-              <span className="text-[9px] font-semibold uppercase text-primary/60 bg-primary/5 border border-primary/10 px-2.5 py-1 rounded-full"
-                style={{ letterSpacing: "0.08em" }}>
-                {c.badge}
-              </span>
-            </div>
-
-            {/* Title */}
-            <h3 className="text-lg font-bold text-foreground mb-2" style={{ letterSpacing: "-0.015em" }}>{c.title}</h3>
-
-            {/* Description */}
-            <p className="text-sm text-muted-foreground leading-relaxed mb-5">{c.desc}</p>
-
-            {/* Bullet items */}
-            <ul className="space-y-2.5 mb-5 flex-1">
-              {c.tags.map((tag) => (
-                <li key={tag} className="text-sm text-foreground/75 flex items-center gap-2.5">
-                  <span className="h-1.5 w-1.5 rounded-full bg-primary/50 shrink-0" />
-                  {tag}
-                </li>
-              ))}
-            </ul>
-
-            {/* Text link CTA */}
-            <button
-              onClick={() => document.querySelector("#contatti")?.scrollIntoView({ behavior: "smooth" })}
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary/70 group-hover:text-primary transition-colors duration-200"
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
+          {cards.map((c, i) => (
+            <motion.div
+              key={c.title}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08 }}
+              className="group rounded-[24px] p-7 flex flex-col transition-all duration-200 ease-out hover:-translate-y-[2px] hover:shadow-[0_16px_48px_-8px_rgba(0,0,0,0.4)]"
+              style={CARD_DARK}
             >
-              Scopri di più
-              <ChevronRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
-            </button>
-          </motion.div>
-        ))}
+              {/* Header: icon left, badge right */}
+              <div className="flex items-start justify-between mb-5">
+                <div className="h-12 w-12 rounded-full flex items-center justify-center"
+                  style={{ background: "rgba(255,255,255,0.08)", boxShadow: "inset 0 1px 0 0 rgba(255,255,255,0.1)" }}>
+                  <c.icon className="h-5 w-5" style={{ color: "rgba(255,255,255,0.8)" }} />
+                </div>
+                <span className="text-[9px] font-semibold uppercase px-2.5 py-1 rounded-full"
+                  style={{
+                    color: "rgba(255,255,255,0.5)",
+                    background: "rgba(255,255,255,0.06)",
+                    border: "1px solid rgba(255,255,255,0.1)",
+                    letterSpacing: "0.08em",
+                  }}>
+                  {c.badge}
+                </span>
+              </div>
+
+              {/* Title */}
+              <h3 className="text-lg font-bold mb-2" style={{ color: "#FFFFFF", letterSpacing: "-0.015em" }}>{c.title}</h3>
+
+              {/* Description */}
+              <p className="text-sm leading-relaxed mb-5" style={{ color: "rgba(255,255,255,0.55)" }}>{c.desc}</p>
+
+              {/* Bullet items */}
+              <ul className="space-y-2.5 mb-5 flex-1">
+                {c.tags.map((tag) => (
+                  <li key={tag} className="text-sm flex items-center gap-2.5" style={{ color: "rgba(255,255,255,0.65)" }}>
+                    <span className="h-1.5 w-1.5 rounded-full shrink-0" style={{ background: "rgba(255,255,255,0.35)" }} />
+                    {tag}
+                  </li>
+                ))}
+              </ul>
+
+              {/* Text link CTA */}
+              <button
+                onClick={() => document.querySelector("#contatti")?.scrollIntoView({ behavior: "smooth" })}
+                className="inline-flex items-center gap-1.5 text-sm font-semibold transition-colors duration-200"
+                style={{ color: "rgba(255,255,255,0.5)" }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.9)")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.5)")}
+              >
+                Scopri di più
+                <ChevronRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+              </button>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   </section>
