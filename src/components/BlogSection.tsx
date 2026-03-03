@@ -53,7 +53,7 @@ const BlogSection = () =>
             <div>
               <p className="text-[11px] font-medium text-white/50 uppercase tracking-wider">{p.date}</p>
               <span
-            className="inline-block mt-3 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider"
+            className="inline-block mt-3 px-3 py-1 rounded-full font-bold uppercase tracking-wider text-sm"
             style={{ background: `${p.tagColor}22`, color: p.tagColor, border: `1px solid ${p.tagColor}33` }}>
             
                 {p.tag}
