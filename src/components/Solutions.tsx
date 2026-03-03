@@ -8,7 +8,7 @@ const cards = [
     tags: ["Contabilità", "Magazzino", "Produzione", "Vendite"],
   },
   {
-    icon: Server, title: "Automazioni", badge: "Auto",
+    icon: Server, title: "Automazioni", badge: "AI",
     desc: "Eliminiamo il lavoro ripetitivo con custom actions, import/export Excel, modelli previsionali e workflow agentici basati su AI.",
     tags: ["Custom Actions", "Import/Export", "Previsioni", "Agentic AI"],
   },
