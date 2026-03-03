@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Instagram, Linkedin } from "lucide-react";
 import darkLogo from "@/assets/novaflow-logo-dark.png";
+import dashboardPreview from "@/assets/dashboard-preview.png";
 
 const cols = [
 { title: "Soluzioni", links: ["ERP Odoo", "Digital Solutions", "Infrastruttura", "Automazioni"] },
@@ -76,45 +77,10 @@ const Footer = () =>
             </div>
           </motion.div>
 
-          {/* Right — mini dashboard mockup */}
+          {/* Right — dashboard preview */}
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.15 }}>
-            <div className="rounded-[24px] overflow-hidden" style={{ background: "linear-gradient(135deg, hsl(226 46% 16%), hsl(226 46% 20%))", border: "1px solid rgba(255,255,255,0.08)", boxShadow: "0 20px 60px -12px rgba(0,0,0,0.5)" }}>
-              <div className="flex items-center gap-2 px-5 py-3" style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
-                <div className="flex gap-1.5">
-                  <div className="h-2.5 w-2.5 rounded-full" style={{ background: "hsl(347 77% 50% / 0.5)" }} />
-                  <div className="h-2.5 w-2.5 rounded-full" style={{ background: "hsl(45 93% 58% / 0.5)" }} />
-                  <div className="h-2.5 w-2.5 rounded-full" style={{ background: "hsl(142 71% 45% / 0.5)" }} />
-                </div>
-                <div className="ml-4 h-2.5 w-24 rounded-full" style={{ background: "rgba(255,255,255,0.08)" }} />
-              </div>
-              <div className="flex">
-                <div className="w-16 p-3 space-y-3 hidden sm:block" style={{ borderRight: "1px solid rgba(255,255,255,0.06)" }}>
-                  {[1, 2, 3, 4, 5].map((n) =>
-                <div key={n} className="h-2 w-full rounded" style={{ background: "rgba(255,255,255,0.06)" }} />
-                )}
-                </div>
-                <div className="flex-1 p-4 space-y-3">
-                  <p className="text-xs font-semibold" style={{ color: "rgba(255,255,255,0.7)" }}>Dashboard</p>
-                  <div className="grid grid-cols-2 gap-2.5">
-                    <div className="rounded-xl p-3" style={{ background: "rgba(255,255,255,0.95)", boxShadow: "0 2px 8px -2px rgba(0,0,0,0.1)" }}>
-                      <p className="text-[9px]" style={{ color: "#6B7280" }}>Efficienza</p>
-                      <p className="text-lg font-bold" style={{ color: "#0F162B" }}>+24%</p>
-                    </div>
-                    <div className="rounded-xl p-3" style={{ background: "rgba(255,255,255,0.95)", boxShadow: "0 2px 8px -2px rgba(0,0,0,0.1)" }}>
-                      <p className="text-[9px]" style={{ color: "#6B7280" }}>Clienti</p>
-                      <p className="text-lg font-bold" style={{ color: "#0F162B" }}>142</p>
-                    </div>
-                  </div>
-                  <div className="rounded-xl p-3" style={{ background: "rgba(255,255,255,0.95)" }}>
-                    <p className="text-[9px] mb-2" style={{ color: "#6B7280" }}>Andamento mensile</p>
-                    <div className="h-16 flex items-end gap-1">
-                      {[40, 55, 45, 65, 50, 70, 60, 80, 68, 75, 85, 78].map((h, i) =>
-                    <div key={i} className="flex-1 rounded-t-sm" style={{ height: `${h}%`, background: "hsl(217 83% 50% / 0.2)" }} />
-                    )}
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="rounded-[24px] overflow-hidden" style={{ border: "1px solid rgba(255,255,255,0.08)", boxShadow: "0 20px 60px -12px rgba(0,0,0,0.5)" }}>
+              <img src={dashboardPreview} alt="NovaFlow Dashboard" className="w-full h-auto block" />
             </div>
           </motion.div>
         </div>
