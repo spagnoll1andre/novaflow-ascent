@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/novaflow-logo.png";
+import logo from "@/assets/novaflow-logo-text.png";
 
 const navItems = [
   { label: "Chi Siamo", href: "#chi-siamo" },
@@ -33,7 +33,7 @@ const Navbar = () => {
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
         <a href="#" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-          <img src={logo} alt="NovaFlow" className="h-8 md:h-10 w-auto" />
+          <img src={logo} alt="NovaFlow" className="h-6 md:h-7 w-auto" />
         </a>
 
         {/* Desktop nav */}
