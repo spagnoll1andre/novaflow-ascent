@@ -10,19 +10,23 @@ const features = [
   { icon: ShieldCheck, title: "Sicurezza", desc: "Dati protetti con standard enterprise." },
 ];
 
-const cardBase = {
-  background: "rgba(255,255,255,0.85)",
-  boxShadow: "0 2px 20px -4px hsla(226,46%,11%,0.06), 0 1px 2px 0 hsla(226,46%,11%,0.02)",
-  borderColor: "hsla(218,53%,90%,0.7)",
+const CARD = {
+  background: "rgba(255,255,255,0.7)",
+  boxShadow: "0 8px 40px -8px hsla(226,46%,11%,0.07), 0 1px 2px 0 hsla(226,46%,11%,0.02), inset 0 1px 0 0 rgba(255,255,255,0.9)",
+  border: "1px solid rgba(218,225,240,0.5)",
 };
 
 const WhyChooseUs = () => (
   <section id="perche-noi" className="scroll-mt-24 py-20 md:py-28 relative overflow-hidden" style={{ background: "#F6FBFF" }}>
+    {/* Ambient lights */}
     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full pointer-events-none"
       style={{ background: "radial-gradient(ellipse at center, hsla(217,83%,50%,0.04) 0%, transparent 70%)" }} />
+    <div className="absolute bottom-[-10%] left-[20%] w-[400px] h-[350px] rounded-full pointer-events-none"
+      style={{ background: "radial-gradient(ellipse at center, hsla(230,60%,55%,0.03) 0%, transparent 70%)" }} />
+
     <div className="container relative z-10">
       <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground">Perché Scegliere Noi</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ letterSpacing: "-0.025em", lineHeight: "1.15" }}>Perché Scegliere Noi</h2>
       </motion.div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
@@ -33,13 +37,14 @@ const WhyChooseUs = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.07 }}
-            className="rounded-[24px] border p-5 transition-all duration-[220ms] ease-out hover:-translate-y-[2px] hover:shadow-[0_6px_32px_-4px_hsla(226,46%,11%,0.1)] hover:border-primary/15"
-            style={cardBase}
+            className="rounded-[24px] p-5 transition-all duration-[220ms] ease-out hover:-translate-y-[2px] hover:shadow-[0_12px_48px_-6px_hsla(226,46%,11%,0.12)] hover:border-primary/15"
+            style={CARD}
           >
-            <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center mb-3.5">
+            <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center mb-3.5"
+              style={{ boxShadow: "inset 0 1px 0 0 rgba(255,255,255,0.6)" }}>
               <f.icon className="h-5 w-5 text-primary" />
             </div>
-            <h3 className="font-bold text-foreground text-[15px]">{f.title}</h3>
+            <h3 className="font-bold text-foreground text-[15px]" style={{ letterSpacing: "-0.01em" }}>{f.title}</h3>
             <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
           </motion.div>
         ))}

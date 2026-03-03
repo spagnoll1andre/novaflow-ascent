@@ -9,7 +9,7 @@ const cols = [
 ];
 
 const Footer = () => (
-  <footer className="py-16 border-t border-border" style={{ background: "#F6FBFF" }}>
+  <footer className="py-16" style={{ background: "#F6FBFF", borderTop: "1px solid rgba(218,225,240,0.5)" }}>
     <div className="container">
       <motion.div
         initial={{ opacity: 0, y: 12 }}
@@ -20,11 +20,11 @@ const Footer = () => (
       >
         <div className="col-span-2 md:col-span-1">
           <img src={logo} alt="NovaFlow" className="h-8 w-auto mb-4" />
-          <p className="text-sm text-muted-foreground leading-relaxed">Digitalizzazione su misura per PMI italiane.</p>
+          <p className="text-sm text-muted-foreground leading-relaxed" style={{ maxWidth: "16rem" }}>Digitalizzazione su misura per PMI italiane.</p>
         </div>
         {cols.map((col) => (
           <div key={col.title}>
-            <h4 className="font-semibold text-foreground mb-3 text-sm">{col.title}</h4>
+            <h4 className="font-semibold text-foreground mb-3 text-sm" style={{ letterSpacing: "0.02em" }}>{col.title}</h4>
             <ul className="space-y-2">
               {col.links.map((link) => (
                 <li key={link}>
@@ -35,7 +35,7 @@ const Footer = () => (
           </div>
         ))}
       </motion.div>
-      <div className="mt-12 pt-6 border-t border-border text-center text-xs text-muted-foreground">
+      <div className="mt-12 pt-6 text-center text-xs text-muted-foreground" style={{ borderTop: "1px solid rgba(218,225,240,0.5)" }}>
         © {new Date().getFullYear()} NovaFlow. Tutti i diritti riservati.
       </div>
     </div>
