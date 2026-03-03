@@ -12,7 +12,7 @@ const features = [
 ];
 
 const WhyChooseUs = () => (
-  <section id="chi-siamo" className="scroll-mt-24 py-20 md:py-28 relative overflow-hidden" style={{ background: "#F6FBFF" }}>
+  <section id="chi-siamo" className="scroll-mt-24 py-24 md:py-32 relative overflow-hidden" style={{ background: "#F6FBFF" }}>
     <div className="container relative z-10">
       <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
         {/* Left — sticky */}
@@ -33,7 +33,7 @@ const WhyChooseUs = () => (
           <div className="mt-6">
             <Button
               size="lg"
-              className="rounded-full px-8 transition-all duration-[220ms] ease-out hover:-translate-y-[1px]"
+              className="rounded-full px-8 transition-all duration-200 ease-out hover:-translate-y-[1px]"
               onClick={() => document.querySelector("#contatti")?.scrollIntoView({ behavior: "smooth" })}
               style={{
                 background: "linear-gradient(135deg, hsl(217 83% 50%), hsl(217 83% 58%))",
@@ -55,7 +55,7 @@ const WhyChooseUs = () => (
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="py-7 border-b border-border/30 first:pt-0 last:border-b-0"
+              className="py-7 first:pt-0 last:border-b-0" style={{ borderBottom: "1px solid rgba(218,225,240,0.35)" }}
             >
               <div className="flex items-start gap-4">
                 <f.icon className="h-5 w-5 text-primary mt-1 shrink-0" />

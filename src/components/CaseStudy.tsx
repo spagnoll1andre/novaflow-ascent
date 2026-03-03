@@ -9,12 +9,12 @@ const cases = [
 
 const CARD = {
   background: "rgba(255,255,255,0.7)",
-  boxShadow: "0 8px 40px -8px hsla(226,46%,11%,0.07), 0 1px 2px 0 hsla(226,46%,11%,0.02), inset 0 1px 0 0 rgba(255,255,255,0.9)",
-  border: "1px solid rgba(218,225,240,0.5)",
+  boxShadow: "0 8px 32px -8px hsla(226,46%,11%,0.08), 0 1px 2px 0 hsla(226,46%,11%,0.02), inset 0 1px 0 0 rgba(255,255,255,0.9)",
+  border: "1px solid rgba(218,225,240,0.45)",
 };
 
 const CaseStudy = () => (
-  <section id="soluzioni-verticali" className="scroll-mt-24 py-20 md:py-28 relative overflow-hidden" style={{ background: "#F6FBFF" }}>
+  <section id="soluzioni-verticali" className="scroll-mt-24 py-24 md:py-32 relative overflow-hidden" style={{ background: "#F6FBFF" }}>
     {/* Ambient lights */}
     <div className="absolute top-[10%] left-[25%] w-[600px] h-[450px] rounded-full pointer-events-none"
       style={{ background: "radial-gradient(ellipse at center, hsla(217,83%,50%,0.04) 0%, transparent 70%)" }} />
@@ -34,7 +34,7 @@ const CaseStudy = () => (
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="md:row-span-2 rounded-[28px] p-7 flex flex-col justify-between transition-all duration-[220ms] ease-out hover:-translate-y-[2px] hover:shadow-[0_12px_48px_-6px_hsla(226,46%,11%,0.14)]"
+          className="md:row-span-2 rounded-[24px] p-7 flex flex-col justify-between transition-all duration-200 ease-out hover:-translate-y-[2px] hover:shadow-[0_12px_40px_-8px_hsla(226,46%,11%,0.13)]"
           style={CARD}
         >
           <div>
@@ -59,7 +59,7 @@ const CaseStudy = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 + i * 0.08 }}
-            className="md:col-span-2 rounded-[24px] p-6 flex flex-col sm:flex-row sm:items-center sm:gap-8 transition-all duration-[220ms] ease-out hover:-translate-y-[2px] hover:shadow-[0_12px_48px_-6px_hsla(226,46%,11%,0.14)]"
+            className="md:col-span-2 rounded-[24px] p-6 flex flex-col sm:flex-row sm:items-center sm:gap-8 transition-all duration-200 ease-out hover:-translate-y-[2px] hover:shadow-[0_12px_40px_-8px_hsla(226,46%,11%,0.13)]"
             style={CARD}
           >
             <div className="flex-1">
@@ -85,7 +85,7 @@ const CaseStudy = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.25 }}
-          className="md:col-span-3 rounded-[28px] p-7 flex flex-col sm:flex-row sm:items-center sm:gap-10 transition-all duration-[220ms] ease-out hover:-translate-y-[2px] hover:shadow-[0_12px_48px_-6px_hsla(226,46%,11%,0.14)]"
+          className="md:col-span-3 rounded-[24px] p-7 flex flex-col sm:flex-row sm:items-center sm:gap-10 transition-all duration-200 ease-out hover:-translate-y-[2px] hover:shadow-[0_12px_40px_-8px_hsla(226,46%,11%,0.13)]"
           style={{
             ...CARD,
             background: "linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(246,251,255,0.7) 100%)",

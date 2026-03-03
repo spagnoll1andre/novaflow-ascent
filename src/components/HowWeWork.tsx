@@ -11,7 +11,7 @@ const steps = [
 ];
 
 const HowWeWork = () => (
-  <section id="automazioni" className="scroll-mt-24 py-20 md:py-28 relative overflow-hidden" style={{ background: "#F6FBFF" }}>
+  <section id="automazioni" className="scroll-mt-24 py-24 md:py-32 relative overflow-hidden" style={{ background: "#F6FBFF" }}>
     {/* Ambient lights */}
     <div className="absolute top-[20%] right-[20%] w-[500px] h-[400px] rounded-full pointer-events-none"
       style={{ background: "radial-gradient(ellipse at center, hsla(217,83%,50%,0.04) 0%, transparent 70%)" }} />
@@ -35,7 +35,7 @@ const HowWeWork = () => (
               transition={{ duration: 0.4, delay: i * 0.06, ease: [0.4, 0, 0.2, 1] }}
               className="flex items-start gap-5 relative group"
             >
-              <div className="h-12 w-12 md:h-16 md:w-16 rounded-full flex items-center justify-center font-bold text-sm md:text-base shrink-0 z-10 text-primary-foreground transition-all duration-[220ms] ease-out group-hover:shadow-[0_6px_24px_-2px_hsl(217_83%_50%/0.35)] group-hover:scale-105"
+              <div className="h-12 w-12 md:h-16 md:w-16 rounded-full flex items-center justify-center font-bold text-sm md:text-base shrink-0 z-10 text-primary-foreground transition-all duration-200 ease-out group-hover:shadow-[0_6px_24px_-2px_hsl(217_83%_50%/0.35)] group-hover:scale-[1.04]"
                 style={{ background: "linear-gradient(135deg, hsl(217 83% 50%), hsl(217 83% 58%))", boxShadow: "0 4px 16px -4px hsl(217 83% 50% / 0.25), inset 0 1px 0 0 hsl(217 83% 70% / 0.25)" }}>
                 {s.num}
               </div>

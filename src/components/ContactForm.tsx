@@ -7,12 +7,12 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 
 const CARD = {
   background: "rgba(255,255,255,0.7)",
-  boxShadow: "0 12px 48px -8px hsla(226,46%,11%,0.08), 0 1px 3px 0 hsla(226,46%,11%,0.03), inset 0 1px 0 0 rgba(255,255,255,0.9)",
-  border: "1px solid rgba(218,225,240,0.5)",
+  boxShadow: "0 8px 32px -8px hsla(226,46%,11%,0.08), 0 1px 2px 0 hsla(226,46%,11%,0.02), inset 0 1px 0 0 rgba(255,255,255,0.9)",
+  border: "1px solid rgba(218,225,240,0.45)",
 };
 
 const ContactForm = () => (
-  <section id="contatti" className="scroll-mt-24 py-20 md:py-28 relative overflow-hidden" style={{ background: "#F6FBFF" }}>
+  <section id="contatti" className="scroll-mt-24 py-24 md:py-32 relative overflow-hidden" style={{ background: "#F6FBFF" }}>
     {/* Ambient lights */}
     <div className="absolute top-[-10%] left-[40%] w-[600px] h-[400px] rounded-full pointer-events-none"
       style={{ background: "radial-gradient(ellipse at center, hsla(217,83%,50%,0.04) 0%, transparent 70%)" }} />
@@ -29,7 +29,7 @@ const ContactForm = () => (
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="space-y-5 rounded-[28px] p-8"
+        className="space-y-5 rounded-[24px] p-8"
         style={CARD}
         onSubmit={(e) => e.preventDefault()}
       >
@@ -74,7 +74,7 @@ const ContactForm = () => (
           <Textarea id="messaggio" placeholder="Descrivici le tue esigenze..." className="rounded-xl min-h-[120px]" />
         </div>
 
-        <Button type="submit" size="lg" className="rounded-full w-full sm:w-auto px-10 transition-all duration-[220ms] ease-out hover:-translate-y-[1px]"
+        <Button type="submit" size="lg" className="rounded-full w-full sm:w-auto px-10 transition-all duration-200 ease-out hover:-translate-y-[1px]"
           style={{
             background: "linear-gradient(135deg, hsl(217 83% 50%), hsl(217 83% 58%))",
             boxShadow: "0 4px 20px -4px hsl(217 83% 50% / 0.35), inset 0 1px 0 0 hsl(217 83% 70% / 0.3)",
