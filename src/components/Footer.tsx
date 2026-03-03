@@ -42,13 +42,13 @@ const Footer = () => (
           <div className="mt-8 flex flex-wrap gap-4">
             <Button
               size="lg"
-              className="rounded-full px-8 transition-all duration-200 ease-out hover:-translate-y-[1px] hover:bg-[rgba(255,255,255,0.18)]"
+              className="rounded-full px-8 transition-all duration-200 ease-out hover:-translate-y-[1px]"
               onClick={() => document.querySelector("#contatti")?.scrollIntoView({ behavior: "smooth" })}
               style={{
-                background: "rgba(255,255,255,0.12)",
+                background: "linear-gradient(180deg, hsl(217 83% 62%), hsl(217 83% 50%))",
                 color: "#fff",
-                border: "1px solid rgba(255,255,255,0.2)",
-                boxShadow: "0 2px 16px -4px rgba(0,0,0,0.3)",
+                border: "1px solid hsl(217 83% 60% / 0.3)",
+                boxShadow: "0 4px 20px -4px hsl(217 83% 50% / 0.4), inset 0 1px 0 0 hsl(217 83% 75% / 0.4)",
               }}
             >
               Richiedi un'analisi gratuita
@@ -56,13 +56,14 @@ const Footer = () => (
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="rounded-full px-8 transition-all duration-200 ease-out hover:-translate-y-[1px] hover:bg-[rgba(255,255,255,0.1)]"
+              className="rounded-full px-8 transition-all duration-200 ease-out hover:-translate-y-[1px]"
               onClick={() => document.querySelector("#contatti")?.scrollIntoView({ behavior: "smooth" })}
               style={{
-                background: "rgba(255,255,255,0.06)",
-                color: "#fff",
-                border: "1px solid rgba(255,255,255,0.15)",
+                background: "rgba(255,255,255,0.95)",
+                color: "#0F162B",
+                border: "1px solid rgba(255,255,255,0.3)",
+                boxShadow: "0 2px 12px -2px rgba(0,0,0,0.2), inset 0 1px 0 0 rgba(255,255,255,1)",
+                fontWeight: 600,
               }}
             >
               Prenota una demo

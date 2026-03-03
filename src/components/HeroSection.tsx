@@ -71,15 +71,22 @@ const HeroSection = () => {
             <Button size="lg" className="rounded-full px-8 transition-all duration-200 ease-out hover:-translate-y-[1px]"
               onClick={() => scrollTo("#contatti")}
               style={{
-                background: "linear-gradient(135deg, hsl(217 83% 50%), hsl(217 83% 58%))",
-                boxShadow: "0 4px 20px -4px hsl(217 83% 50% / 0.35), 0 0 0 0.5px hsl(217 83% 50% / 0.15), inset 0 1px 0 0 hsl(217 83% 70% / 0.3)",
+                background: "linear-gradient(180deg, hsl(217 83% 62%), hsl(217 83% 50%))",
+                boxShadow: "0 4px 20px -4px hsl(217 83% 50% / 0.4), 0 0 0 0.5px hsl(217 83% 50% / 0.2), inset 0 1px 0 0 hsl(217 83% 75% / 0.4)",
+                border: "1px solid hsl(217 83% 60% / 0.3)",
               }}>
               Richiedi un'analisi gratuita
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <Button size="lg" variant="outline"
-              className="rounded-full px-8 border-border hover:border-primary/40 hover:bg-primary/5 transition-all duration-200 ease-out"
-              onClick={() => scrollTo("#contatti")}>
+              className="rounded-full px-8 transition-all duration-200 ease-out hover:-translate-y-[1px]"
+              onClick={() => scrollTo("#contatti")}
+              style={{
+                background: "rgba(255,255,255,0.8)",
+                border: "1px solid rgba(218,225,240,0.6)",
+                boxShadow: "0 2px 12px -2px hsla(226,46%,11%,0.08), inset 0 1px 0 0 rgba(255,255,255,0.9)",
+                color: "hsl(226 46% 20%)",
+              }}>
               Prenota una demo
             </Button>
           </div>
