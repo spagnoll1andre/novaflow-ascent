@@ -48,8 +48,8 @@ const Solutions = () => (
 
       <div className="container relative z-10">
         <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold" style={{ color: "#FFFFFF", letterSpacing: "-0.025em", lineHeight: "1.15" }}>Le Nostre Soluzioni</h2>
-          <p className="mt-4 max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.6)", maxWidth: "32rem" }}>Tutto ciò che serve per digitalizzare la tua azienda, in un unico partner.</p>
+          <h2 className="text-3xl md:text-4xl font-semibold" style={{ color: "#FFFFFF", letterSpacing: "-0.025em", lineHeight: "1.15" }}>Le Nostre Soluzioni</h2>
+          <p className="mt-4 max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.7)", maxWidth: "32rem" }}>Tutto ciò che serve per digitalizzare la tua azienda, in un unico partner.</p>
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
@@ -66,14 +66,14 @@ const Solutions = () => (
               {/* Header: icon left, badge right */}
               <div className="flex items-start justify-between mb-5">
                 <div className="h-12 w-12 rounded-full flex items-center justify-center"
-                  style={{ background: "rgba(255,255,255,0.08)", boxShadow: "inset 0 1px 0 0 rgba(255,255,255,0.1)" }}>
-                  <c.icon className="h-5 w-5" style={{ color: "rgba(255,255,255,0.8)" }} />
+                  style={{ background: "rgba(255,255,255,0.1)", boxShadow: "inset 0 1px 0 0 rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.15)" }}>
+                  <c.icon className="h-5 w-5" style={{ color: "#FFFFFF" }} />
                 </div>
                 <span className="text-[9px] font-semibold uppercase px-2.5 py-1 rounded-full"
                   style={{
-                    color: "rgba(255,255,255,0.5)",
-                    background: "rgba(255,255,255,0.06)",
-                    border: "1px solid rgba(255,255,255,0.1)",
+                    color: "rgba(255,255,255,0.85)",
+                    background: "rgba(255,255,255,0.08)",
+                    border: "1px solid rgba(255,255,255,0.2)",
                     letterSpacing: "0.08em",
                   }}>
                   {c.badge}
@@ -81,16 +81,16 @@ const Solutions = () => (
               </div>
 
               {/* Title */}
-              <h3 className="text-lg font-bold mb-2" style={{ color: "#FFFFFF", letterSpacing: "-0.015em" }}>{c.title}</h3>
+              <h3 className="text-lg font-semibold mb-2" style={{ color: "#FFFFFF", letterSpacing: "-0.015em" }}>{c.title}</h3>
 
               {/* Description */}
-              <p className="text-sm leading-relaxed mb-5" style={{ color: "rgba(255,255,255,0.55)" }}>{c.desc}</p>
+              <p className="text-sm leading-relaxed mb-5" style={{ color: "rgba(255,255,255,0.85)" }}>{c.desc}</p>
 
               {/* Bullet items */}
               <ul className="space-y-2.5 mb-5 flex-1">
                 {c.tags.map((tag) => (
-                  <li key={tag} className="text-sm flex items-center gap-2.5" style={{ color: "rgba(255,255,255,0.65)" }}>
-                    <span className="h-1.5 w-1.5 rounded-full shrink-0" style={{ background: "rgba(255,255,255,0.35)" }} />
+                  <li key={tag} className="text-sm flex items-center gap-2.5" style={{ color: "rgba(255,255,255,0.9)" }}>
+                    <span className="h-1.5 w-1.5 rounded-full shrink-0" style={{ background: "rgba(255,255,255,0.6)" }} />
                     {tag}
                   </li>
                 ))}
@@ -100,9 +100,9 @@ const Solutions = () => (
               <button
                 onClick={() => document.querySelector("#contatti")?.scrollIntoView({ behavior: "smooth" })}
                 className="inline-flex items-center gap-1.5 text-sm font-semibold transition-colors duration-200"
-                style={{ color: "rgba(255,255,255,0.5)" }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.9)")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.5)")}
+                style={{ color: "rgba(255,255,255,0.8)" }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#FFFFFF")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.8)")}
               >
                 Scopri di più
                 <ChevronRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
