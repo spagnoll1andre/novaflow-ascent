@@ -8,8 +8,13 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="hero" className="scroll-mt-20 pt-28 pb-20 md:pt-36 md:pb-28">
-      <div className="container grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+    <section id="hero" className="scroll-mt-20 pt-28 pb-20 md:pt-36 md:pb-28 relative overflow-hidden"
+      style={{ background: "#F6FBFF" }}>
+      {/* Radial halo */}
+      <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[900px] h-[700px] rounded-full pointer-events-none"
+        style={{ background: "radial-gradient(ellipse at center, hsla(217,83%,50%,0.06) 0%, transparent 70%)" }} />
+
+      <div className="container grid md:grid-cols-2 gap-12 md:gap-16 items-center relative z-10">
         {/* Left */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -27,14 +32,16 @@ const HeroSection = () => {
             Partner certificato Odoo — oltre 50 implementazioni di successo.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Button size="lg" className="rounded-full px-8" onClick={() => scrollTo("#contatti")}>
+            <Button size="lg" className="rounded-full px-8 shadow-[0_2px_16px_0_hsl(217_83%_50%/0.25)] hover:shadow-[0_4px_24px_0_hsl(217_83%_50%/0.35)] transition-all duration-200"
+              onClick={() => scrollTo("#contatti")}
+              style={{ background: "linear-gradient(135deg, hsl(217 83% 50%), hsl(217 83% 58%))" }}>
               Richiedi un'analisi gratuita
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="rounded-full px-8"
+              className="rounded-full px-8 border-border hover:border-primary/40 hover:bg-primary/5 transition-all duration-200"
               onClick={() => scrollTo("#contatti")}
             >
               Prenota una demo
@@ -49,7 +56,8 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="relative"
         >
-          <div className="bg-card rounded-3xl border border-border/60 shadow-lg p-6 md:p-8 space-y-5">
+          <div className="rounded-[32px] border border-border/50 p-6 md:p-8 space-y-5"
+            style={{ background: "rgba(255,255,255,0.8)", boxShadow: "0 8px 48px -8px hsla(226,46%,11%,0.10), 0 1px 4px 0 hsla(226,46%,11%,0.04)" }}>
             {/* Mini stat cards */}
             <div className="grid grid-cols-3 gap-3">
               {[

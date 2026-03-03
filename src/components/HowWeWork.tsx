@@ -11,15 +11,14 @@ const steps = [
 ];
 
 const HowWeWork = () => (
-  <section id="come-lavoriamo" className="scroll-mt-20 py-20 md:py-28 bg-background">
-    <div className="container">
+  <section id="come-lavoriamo" className="scroll-mt-20 py-20 md:py-28 relative overflow-hidden" style={{ background: "#F6FBFF" }}>
+    <div className="container relative z-10">
       <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
         <h2 className="text-3xl md:text-4xl font-bold text-foreground">Come Lavoriamo</h2>
         <p className="mt-4 text-muted-foreground">Un metodo collaudato in 7 step.</p>
       </motion.div>
 
       <div className="max-w-3xl mx-auto relative">
-        {/* Vertical line */}
         <div className="absolute left-6 md:left-8 top-0 bottom-0 w-px bg-border" />
 
         <div className="space-y-8">
@@ -32,7 +31,8 @@ const HowWeWork = () => (
               transition={{ delay: i * 0.08 }}
               className="flex items-start gap-5 relative"
             >
-              <div className="h-12 w-12 md:h-16 md:w-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm md:text-base shrink-0 z-10">
+              <div className="h-12 w-12 md:h-16 md:w-16 rounded-full flex items-center justify-center font-bold text-sm md:text-base shrink-0 z-10 text-primary-foreground"
+                style={{ background: "linear-gradient(135deg, hsl(217 83% 50%), hsl(217 83% 58%))" }}>
                 {s.num}
               </div>
               <div className="pt-2 md:pt-4">

@@ -11,8 +11,10 @@ const features = [
 ];
 
 const WhyChooseUs = () => (
-  <section id="perche-noi" className="scroll-mt-20 py-20 md:py-28 bg-secondary/30">
-    <div className="container">
+  <section id="perche-noi" className="scroll-mt-20 py-20 md:py-28 relative overflow-hidden" style={{ background: "#F6FBFF" }}>
+    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full pointer-events-none"
+      style={{ background: "radial-gradient(ellipse at center, hsla(217,83%,50%,0.04) 0%, transparent 70%)" }} />
+    <div className="container relative z-10">
       <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
         <h2 className="text-3xl md:text-4xl font-bold text-foreground">Perché Scegliere Noi</h2>
       </motion.div>
