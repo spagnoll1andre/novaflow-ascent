@@ -11,7 +11,7 @@ const faqs = [
 
 const FAQSection = () =>
 <section id="faq" className="scroll-mt-24 relative overflow-hidden py-3 md:py-5" style={{ background: "#F6FBFF" }}>
-    <div className="relative mx-auto w-[95%] rounded-[32px] md:rounded-[40px] py-10 md:py-14 overflow-hidden"
+    <div className="relative mx-auto w-[95%] rounded-[32px] md:rounded-[40px] py-8 md:py-10 overflow-hidden"
   style={{
     background: "linear-gradient(180deg, #0F162B 0%, #0F162B 100%)",
     boxShadow: "0 32px 100px -16px hsla(226,46%,11%,0.4), 0 0 0 0.5px rgba(255,255,255,0.05)"
@@ -23,7 +23,7 @@ const FAQSection = () =>
       <div className="absolute top-0 left-0 right-0 h-px pointer-events-none" style={{ background: "linear-gradient(90deg, transparent 5%, rgba(255,255,255,0.06) 50%, transparent 95%)" }} />
 
       <div className="container max-w-3xl relative z-10">
-        <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
+        <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
           <span className="inline-block px-5 py-1.5 rounded-full text-xs font-semibold uppercase"
         style={{
           color: "#FFFFFF",
@@ -68,27 +68,6 @@ const FAQSection = () =>
         )}
         </Accordion>
 
-        <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="mt-14 text-center">
-        
-          <Button
-          size="lg"
-          className="rounded-full px-10 transition-all duration-200 ease-out hover:-translate-y-[1px]"
-          onClick={() => document.querySelector("#contatti")?.scrollIntoView({ behavior: "smooth" })}
-          style={{
-            background: "rgba(255,255,255,0.95)",
-            color: "#0F162B",
-            border: "1px solid rgba(255,255,255,0.3)",
-            boxShadow: "0 4px 20px -4px rgba(0,0,0,0.3), inset 0 1px 0 0 rgba(255,255,255,1)",
-            fontWeight: 600
-          }}>
-          
-            Contattaci
-          </Button>
-        </motion.div>
       </div>
     </div>
   </section>;
