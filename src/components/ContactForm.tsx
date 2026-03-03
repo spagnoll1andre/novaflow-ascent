@@ -36,29 +36,29 @@ const ContactForm = () => (
         <div className="grid sm:grid-cols-2 gap-5">
           <div className="space-y-2">
             <Label htmlFor="nome">Nome *</Label>
-            <Input id="nome" placeholder="Mario Rossi" className="rounded-xl" />
+            <Input id="nome" placeholder="Mario Rossi" className="rounded-xl bg-white" />
           </div>
           <div className="space-y-2">
             <Label htmlFor="azienda">Azienda *</Label>
-            <Input id="azienda" placeholder="Azienda S.r.l." className="rounded-xl" />
+            <Input id="azienda" placeholder="Azienda S.r.l." className="rounded-xl bg-white" />
           </div>
         </div>
 
         <div className="grid sm:grid-cols-2 gap-5">
           <div className="space-y-2">
             <Label htmlFor="email">Email *</Label>
-            <Input id="email" type="email" placeholder="mario@azienda.it" className="rounded-xl" />
+            <Input id="email" type="email" placeholder="mario@azienda.it" className="rounded-xl bg-white" />
           </div>
           <div className="space-y-2">
             <Label htmlFor="telefono">Telefono (opz.)</Label>
-            <Input id="telefono" placeholder="+39 333 1234567" className="rounded-xl" />
+            <Input id="telefono" placeholder="+39 333 1234567" className="rounded-xl bg-white" />
           </div>
         </div>
 
         <div className="space-y-2">
           <Label>Settore</Label>
           <Select>
-            <SelectTrigger className="rounded-xl">
+            <SelectTrigger className="rounded-xl bg-white">
               <SelectValue placeholder="Seleziona settore" />
             </SelectTrigger>
             <SelectContent>
@@ -71,16 +71,18 @@ const ContactForm = () => (
 
         <div className="space-y-2">
           <Label htmlFor="messaggio">Messaggio</Label>
-          <Textarea id="messaggio" placeholder="Descrivici le tue esigenze..." className="rounded-xl min-h-[120px]" />
+          <Textarea id="messaggio" placeholder="Descrivici le tue esigenze..." className="rounded-xl min-h-[120px] bg-white" />
         </div>
 
-        <Button type="submit" size="lg" className="rounded-full w-full sm:w-auto px-10 transition-all duration-200 ease-out hover:-translate-y-[1px]"
-          style={{
-            background: "linear-gradient(135deg, hsl(217 83% 50%), hsl(217 83% 58%))",
-            boxShadow: "0 4px 20px -4px hsl(217 83% 50% / 0.35), inset 0 1px 0 0 hsl(217 83% 70% / 0.3)",
-          }}>
-          Invia richiesta
-        </Button>
+        <div className="text-center pt-2">
+          <Button type="submit" size="lg" className="rounded-full px-10 transition-all duration-200 ease-out hover:-translate-y-[1px]"
+            style={{
+              background: "linear-gradient(135deg, hsl(217 83% 50%), hsl(217 83% 58%))",
+              boxShadow: "0 4px 20px -4px hsl(217 83% 50% / 0.35), inset 0 1px 0 0 hsl(217 83% 70% / 0.3)",
+            }}>
+            Invia richiesta
+          </Button>
+        </div>
       </motion.form>
     </div>
   </section>
