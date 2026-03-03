@@ -79,7 +79,7 @@ const PoweredByOdoo = () => (
                 src={logo.src}
                 alt={logo.name}
                 className="h-14 md:h-16 w-auto object-contain shrink-0"
-                style={{ opacity: 0.7, filter: "brightness(2) grayscale(1) contrast(1.2)" }}
+                style={{ opacity: 0.85 }}
               />
             ))}
           </motion.div>
