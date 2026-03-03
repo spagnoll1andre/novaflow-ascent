@@ -1,16 +1,26 @@
 import { motion } from "framer-motion";
+import logoHyundai from "@/assets/logo-hyundai.png";
 import logoCasio from "@/assets/logo-casio.png";
 import logoKpmg from "@/assets/logo-kpmg.png";
-import logoHyundai from "@/assets/logo-hyundai.png";
 import logoHeineken from "@/assets/logo-heineken.png";
-import logoToyota from "@/assets/logo-toyota.png";
+import logoMitsubishi from "@/assets/logo-mitsubishi.png";
+import logoShell from "@/assets/logo-shell.png";
+import logoIbm from "@/assets/logo-ibm.png";
+import logoMizuno from "@/assets/logo-mizuno.png";
+import logoAeon from "@/assets/logo-aeon.png";
+import logoMegamarket from "@/assets/logo-megamarket.png";
 
 const logos = [
+  { name: "Hyundai", src: logoHyundai },
   { name: "Casio", src: logoCasio },
   { name: "KPMG", src: logoKpmg },
-  { name: "Hyundai", src: logoHyundai },
   { name: "Heineken", src: logoHeineken },
-  { name: "Toyota", src: logoToyota },
+  { name: "Mitsubishi", src: logoMitsubishi },
+  { name: "Shell", src: logoShell },
+  { name: "IBM", src: logoIbm },
+  { name: "Mizuno", src: logoMizuno },
+  { name: "Aeon", src: logoAeon },
+  { name: "Mega Market", src: logoMegamarket },
 ];
 
 // Duplicate for seamless loop
