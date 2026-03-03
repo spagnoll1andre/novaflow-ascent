@@ -36,7 +36,7 @@ const FAQSection = () =>
           <h2 className="mt-8 text-3xl md:text-4xl font-medium" style={{ color: "#FFFFFF", letterSpacing: "-0.025em", lineHeight: "1.15" }}>
             Domande Frequenti
           </h2>
-          <p className="mt-5 text-base leading-relaxed mx-auto text-primary-foreground font-extralight" style={{ color: "rgba(255,255,255,0.55)", maxWidth: "30rem" }}>
+          <p className="mt-5 text-base leading-relaxed mx-auto font-extralight text-primary-foreground" style={{ color: "rgba(255,255,255,0.55)", maxWidth: "30rem" }}>
             Le risposte alle domande più comuni. Non trovi quello che cerchi? Contattaci direttamente.
           </p>
         </motion.div>
