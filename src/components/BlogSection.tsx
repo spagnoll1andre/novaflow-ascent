@@ -47,7 +47,7 @@ const BlogSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.07 }}
-            className="rounded-[24px] p-6 flex flex-col justify-between min-h-[340px] group transition-all duration-200 ease-out hover:-translate-y-[2px] hover:shadow-[0_12px_40px_-8px_hsla(226,46%,11%,0.3)]"
+            className="rounded-[24px] p-6 flex flex-col justify-between min-h-[408px] group transition-all duration-200 ease-out hover:-translate-y-[2px] hover:shadow-[0_12px_40px_-8px_hsla(226,46%,11%,0.3)]"
             style={{ background: p.bg }}
           >
             <div>
