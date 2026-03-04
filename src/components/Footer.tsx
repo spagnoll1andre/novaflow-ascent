@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Instagram, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 import darkLogo from "@/assets/novaflow-logo-dark.png";
 import dashboardPreview from "@/assets/dashboard-preview.png";
 
@@ -150,15 +151,25 @@ const Footer = () =>
               <ul className="space-y-2.5">
                 {col.links.map((link) =>
             <li key={link} className="text-primary-foreground">
-                    <a
+                    {link === "Chi siamo" ? (
+                      <Link
+                        to="/portfolio"
+                        className="text-sm transition-colors duration-200 ease-out hover:underline"
+                        style={{ color: "rgba(255,255,255,0.5)" }}
+                        onMouseEnter={(e) => e.currentTarget.style.color = "rgba(255,255,255,0.85)"}
+                        onMouseLeave={(e) => e.currentTarget.style.color = "rgba(255,255,255,0.5)"}>
+                        {link}
+                      </Link>
+                    ) : (
+                      <a
                 href="#"
                 className="text-sm transition-colors duration-200 ease-out hover:underline"
                 style={{ color: "rgba(255,255,255,0.5)" }}
                 onMouseEnter={(e) => e.currentTarget.style.color = "rgba(255,255,255,0.85)"}
                 onMouseLeave={(e) => e.currentTarget.style.color = "rgba(255,255,255,0.5)"}>
-                
-                      {link}
-                    </a>
+                        {link}
+                      </a>
+                    )}
                   </li>
             )}
               </ul>
