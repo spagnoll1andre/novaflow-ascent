@@ -93,18 +93,6 @@ const Portfolio = () => {
 
       <div className="min-h-screen bg-background">
         <div className="container py-8 md:py-12 lg:py-16">
-
-          {/* ───── MOBILE-ONLY HERO ───── */}
-          <motion.div {...fadeUp} className="lg:hidden mt-4 mb-8">
-            <span className="text-sm font-semibold text-primary">Ciao!</span>
-            <h1 className="mt-3 text-[2rem] font-extrabold text-foreground leading-[1.1]"
-              style={{ letterSpacing: "-0.025em" }}>
-              Sono Andrea Spagnolli,{" "}
-              <span className="text-primary">amministratore di NovaFlow</span>{" "}
-              con base a Roma
-            </h1>
-          </motion.div>
-
           <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-8 lg:gap-12">
 
             {/* ───── SIDEBAR ───── */}
@@ -124,7 +112,7 @@ const Portfolio = () => {
                   {/* Availability badge */}
                   <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold border border-primary/20 bg-primary/5 text-primary mb-3">
                     <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                    Disponibile
+                    Disponibile per lavori
                   </span>
 
                   <h2 className="text-xl font-bold text-foreground">John Anderson</h2>
@@ -141,7 +129,7 @@ const Portfolio = () => {
                   {/* CTA buttons */}
                   <div className="flex gap-3 mt-6 w-full">
                     <Button variant="outline" className="flex-1 rounded-full text-sm gap-2">
-                      <Download className="w-4 h-4" /> NovaFlow
+                      <Download className="w-4 h-4" /> Download CV
                     </Button>
                     <Button className="flex-1 rounded-full text-sm gap-2"
                       onClick={() => scrollTo("#contact")}
@@ -161,13 +149,13 @@ const Portfolio = () => {
             <main className="space-y-12 md:space-y-16 min-w-0">
 
               {/* HERO INTRO */}
-              <motion.section {...fadeUp} className="hidden lg:block">
-                <span className="text-sm font-semibold text-primary">Ciao!</span>
+              <motion.section {...fadeUp}>
+                <span className="text-sm font-semibold text-primary">👋 Ciao!</span>
                 <h1 className="mt-3 text-[2.2rem] md:text-[3rem] font-extrabold text-foreground leading-[1.1]"
                   style={{ letterSpacing: "-0.025em" }}>
-                  Sono Andrea Spagnolli,{" "}
-                  <span className="text-primary">amministratore di NovaFlow</span>{" "}
-                  con base a Roma
+                  Sono John Anderson,{" "}
+                  <span className="text-primary">Framer Designer</span>{" "}
+                  con base a Los Angeles, CA.
                 </h1>
                 <p className="mt-5 text-muted-foreground text-lg leading-relaxed max-w-2xl">
                   Mi specializzo nella creazione di esperienze digitali pulite e user-friendly, unendo creatività e funzionalità. Con una solida esperienza nel design interattivo, mi concentro sulla realizzazione di design che non solo sono belli, ma offrono anche interazioni fluide e coinvolgenti.
