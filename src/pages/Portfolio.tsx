@@ -162,12 +162,12 @@ const Portfolio = () => {
 
               {/* HERO INTRO */}
               <motion.section {...fadeUp} className="hidden lg:block">
-                <span className="text-sm font-semibold text-primary">👋 Ciao!</span>
+                <span className="text-sm font-semibold text-primary">Ciao!</span>
                 <h1 className="mt-3 text-[2.2rem] md:text-[3rem] font-extrabold text-foreground leading-[1.1]"
                   style={{ letterSpacing: "-0.025em" }}>
-                  Sono John Anderson,{" "}
-                  <span className="text-primary">Framer Designer</span>{" "}
-                  con base a Los Angeles, CA.
+                  Sono Andrea Spagnolli,{" "}
+                  <span className="text-primary">amministratore di NovaFlow</span>{" "}
+                  con base a Roma
                 </h1>
                 <p className="mt-5 text-muted-foreground text-lg leading-relaxed max-w-2xl">
                   Mi specializzo nella creazione di esperienze digitali pulite e user-friendly, unendo creatività e funzionalità. Con una solida esperienza nel design interattivo, mi concentro sulla realizzazione di design che non solo sono belli, ma offrono anche interazioni fluide e coinvolgenti.
