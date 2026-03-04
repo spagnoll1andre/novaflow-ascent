@@ -99,9 +99,9 @@ const Portfolio = () => {
             <span className="text-sm font-semibold text-primary">Ciao!</span>
             <h1 className="mt-3 text-[2rem] font-extrabold text-foreground leading-[1.1]"
               style={{ letterSpacing: "-0.025em" }}>
-              Sono John Anderson,{" "}
-              <span className="text-primary">Framer Designer</span>{" "}
-              con base a Los Angeles, CA.
+              Sono Andrea Spagnolli,{" "}
+              <span className="text-primary">amministratore di NovaFlow</span>{" "}
+              con base a Roma
             </h1>
           </motion.div>
 
