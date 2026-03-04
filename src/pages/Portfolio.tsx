@@ -124,7 +124,7 @@ const Portfolio = () => {
                   {/* Availability badge */}
                   <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold border border-primary/20 bg-primary/5 text-primary mb-3">
                     <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                    Disponibile per lavori
+                    Disponibile
                   </span>
 
                   <h2 className="text-xl font-bold text-foreground">John Anderson</h2>
