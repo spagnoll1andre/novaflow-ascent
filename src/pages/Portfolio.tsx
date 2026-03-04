@@ -93,6 +93,18 @@ const Portfolio = () => {
 
       <div className="min-h-screen bg-background">
         <div className="container py-8 md:py-12 lg:py-16">
+
+          {/* ───── MOBILE-ONLY HERO ───── */}
+          <motion.div {...fadeUp} className="lg:hidden mt-4 mb-8">
+            <span className="text-sm font-semibold text-primary">👋 Ciao!</span>
+            <h1 className="mt-3 text-[2rem] font-extrabold text-foreground leading-[1.1]"
+              style={{ letterSpacing: "-0.025em" }}>
+              Sono John Anderson,{" "}
+              <span className="text-primary">Framer Designer</span>{" "}
+              con base a Los Angeles, CA.
+            </h1>
+          </motion.div>
+
           <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-8 lg:gap-12">
 
             {/* ───── SIDEBAR ───── */}
@@ -149,7 +161,7 @@ const Portfolio = () => {
             <main className="space-y-12 md:space-y-16 min-w-0">
 
               {/* HERO INTRO */}
-              <motion.section {...fadeUp}>
+              <motion.section {...fadeUp} className="hidden lg:block">
                 <span className="text-sm font-semibold text-primary">👋 Ciao!</span>
                 <h1 className="mt-3 text-[2.2rem] md:text-[3rem] font-extrabold text-foreground leading-[1.1]"
                   style={{ letterSpacing: "-0.025em" }}>
