@@ -96,7 +96,7 @@ const Portfolio = () => {
 
           {/* ───── MOBILE-ONLY HERO ───── */}
           <motion.div {...fadeUp} className="lg:hidden mt-4 mb-8">
-            <span className="text-sm font-semibold text-primary">👋 Ciao!</span>
+            <span className="text-sm font-semibold text-primary">Ciao!</span>
             <h1 className="mt-3 text-[2rem] font-extrabold text-foreground leading-[1.1]"
               style={{ letterSpacing: "-0.025em" }}>
               Sono John Anderson,{" "}
