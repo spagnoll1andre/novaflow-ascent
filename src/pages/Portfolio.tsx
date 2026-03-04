@@ -141,7 +141,7 @@ const Portfolio = () => {
                   {/* CTA buttons */}
                   <div className="flex gap-3 mt-6 w-full">
                     <Button variant="outline" className="flex-1 rounded-full text-sm gap-2">
-                      <Download className="w-4 h-4" /> Download CV
+                      <Download className="w-4 h-4" /> NovaFlow
                     </Button>
                     <Button className="flex-1 rounded-full text-sm gap-2"
                       onClick={() => scrollTo("#contact")}
